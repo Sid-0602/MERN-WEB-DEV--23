@@ -1,0 +1,133 @@
+p{
+    color: black;
+    font-size: 18px;
+
+    
+}
+
+h1{
+    color: red;
+    font-size: 25px;
+}
+
+p,h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.cursive{
+    font-family: cursive;
+}
+
+#blog-desc{
+    color: #314831;
+}
+
+/* nesting uppercase and cursive*/
+
+/*
+li h4{
+    font-family: cursive;
+    text-transform: uppercase;
+}
+
+*/
+
+/* This gives red color to all paragraphs inside id= "site-desc" */
+#site-desc p{
+    color:red;
+}
+
+#blog-title:hover{
+    color: orange;
+}
+
+#div1{
+    height: 50vh; /*viewport height and width */
+    width: 50vw;
+
+    background-color: blue;
+
+    /*border specs */
+    border-width: 2px;
+    border-style: solid;
+    border-color:palegreen;
+    margin: 4px;
+    
+
+}
+
+#div2{
+    height: 50%;
+    height: 50%;
+
+    background-color: cyan;
+
+    border-width: 2px;
+
+    border-style: dashed;
+    border-color: black;
+    margin: 4px;
+}
+
+#div3{
+    height: 5rem;
+    width: 19rem;
+    background-color: purple;
+    
+    border: 2px dotted yellow;
+    border-radius: 10px;
+    margin: 4px;
+    
+}
+
+#outer-div{
+    height: 5rem;
+    width: 10rem;
+
+    background-color: orange;
+    border: black;
+    
+
+    text-align: center;
+    margin: 10px;
+
+    padding: 10px;
+    
+}
+
+#sample-text{
+    border-left: 4px solid yellow;
+}
+
+#main-content{
+    border-width: 5px 5px 5px 0px;
+    border-color:#ff6060;
+    border-radius: 50px;
+}
+
+#text-styling{
+    font-size: 20px;
+    color:maroon;
+    font-weight: bolder;
+    text-align: left;
+    text-decoration: none;
+}
+
+#logo-img-container{
+    height: 100vh;
+    width: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+
+    background-attachment: scroll;
+
+
+}
+
+

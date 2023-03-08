@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <!-- FORMS use labels, input and values-->
+    <div>
+        <h1><b>This is Login Page</b></h1>
+    </div>
+   <form>
+    <div>
+        <label for = "username">Username</label> 
+        <br>
+        <input type="text" id="username" required placeholder="name">
+    </div>
+    <br>
+    <div>
+        <label for="password">Password</label>
+        <br>
+        <input type="password" id="password" required>
+    </div>
+    <br>
+    <div>
+        <label for="email">Email-ID</label>
+        <br>
+        <input type="email" id="email" name="email" required placeholder="abc@domain.com">
+    </div>
+    <br>
+    <div>
+        <label for="date">Date</label>
+        <br>
+        <input type="date" id="date">
+    </div>
+    <br>
+    <div>
+        <label for="country">Country</label>
+        <br>
+        <input type="country" id="country" name="country" value="India" disabled
+         >
+    </div>
+    <br>
+
+    <!--This is radio button -->
+    <div>
+        <p>Gender</p>
+        <input type="radio" name="gender" value="male" checked>Male <br>
+        <input type="radio" name="gender" value="female">Female  <br>
+        <input type="radio" name="gender" value="other"> Other 
+    </div>
+    <br>
+
+    <!--This is for check-box-->
+    <div>
+        <p>Courses Done</p>
+        <input type="checkbox" name="Courses" value="c++">C++ <br>
+        <input type="checkbox" name="Courses" value="DSA">DSA<br>
+        <input type="checkbox" name="Courses" value="HTML,CSS,JS">Frontend<br>
+        <input type="checkbox" name="Courses" value="NodeJS">NodeJS<br>
+    </div>
+    <br>
+    <div>
+        <input type="submit">
+    </div>
+
+   </form> 
+</body>
+</html>

@@ -1,0 +1,23 @@
+#div1{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+
+#div2{
+
+    height: 200px;
+    width: 200px;
+    background-color: cyan;
+}
+
+/* Changing property of inline to block and vice-versa */
+
+span{
+    display: block;
+    margin: 50px 0;
+    padding: 0;
+    color:red;
+}
+
+

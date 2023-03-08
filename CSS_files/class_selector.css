@@ -1,0 +1,31 @@
+p{
+    font-size: 20px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+
+/* This applies to every h4 element
+h4{
+    text-transform: uppercase;
+    color:brown;
+}
+
+*/
+
+
+/* this is uppercase class */
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.redtext{
+    color:red;
+}
+
+.cursive{
+    font-family: cursive;
+}
