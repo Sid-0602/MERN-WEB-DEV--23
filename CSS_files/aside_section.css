@@ -1,0 +1,158 @@
+body{
+    margin-left: 60px;
+    padding: 0px;
+}
+
+#content{
+    margin-top: 40px;
+}
+
+
+main{
+    width: 75%;
+    display: inline-block;
+}
+
+aside{
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 15px;
+
+}
+
+#full-img{
+    width:100vw;
+}
+
+p{
+    color: black;
+    font-size: 18px;  
+}
+
+h1{
+    color: red;
+    font-size: 25px;
+}
+
+p,h1{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.cursive{
+    font-family: cursive;
+}
+
+#blog-desc{
+    color: #314831;
+}
+
+/* nesting uppercase and cursive*/
+
+/*
+li h4{
+    font-family: cursive;
+    text-transform: uppercase;
+}
+
+*/
+
+/* This gives red color to all paragraphs inside id= "site-desc" */
+#site-desc p{
+    color:red;
+}
+
+#blog-title:hover{
+    color: orange;
+}
+
+
+
+/* aside section */
+
+/* Subcription form */
+
+.widget{
+    border-top: 4px solid black ;
+}
+
+.widget-title{
+    font-size: 1.5rem;
+    color:black;
+
+}
+
+.widget input{
+    display: block;
+    background-color: #f7f7f7;
+    margin-bottom: 15px;
+    padding: 4px;
+    color: black;
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
+
+button[type="submit"]{
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+
+/* SEARCH BAR */
+
+.search-widget{
+    border-top: 4px solid black;
+}
+
+#search{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    padding: 4px;
+    font-size: 0.98rem;
+    width: 70%;
+    display: inline-block;
+}
+
+#search-btn{
+    display: inline-block;
+    width: 20%;
+    margin-left: -5px;
+    font-size: 1.2rem;
+    height: auto;
+}
+/* RECENT POSTS SECTION */
+
+.recent-post-widget{
+    border-top: 4px solid black;
+}
+
+ul{
+    list-style: none;
+}
+
+ul li::before{
+    content: "\2022";
+    color:black;
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+}
+
+.points-color{
+    color:#dc784e;
+    font-size: 1.2rem;
+}
+
+
+
+
+
