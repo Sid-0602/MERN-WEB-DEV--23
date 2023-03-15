@@ -1,0 +1,50 @@
+#container{
+    height: 700px;
+    width: 700px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+
+}
+
+#container div{
+    height: 200px;
+    width: 200px;
+}
+
+#div1{
+    background-color: cyan;
+    order: 0;
+    flex-grow: 1;
+}
+
+#div2{
+    background-color: red;
+    order: 0;
+    flex-grow: 1;
+
+}
+
+
+#div3{
+    background-color: green;
+    order: 0;
+    flex-grow: 1;
+}
+
+#div4{
+    background-color: pink;
+    order: 0;
+}
+
+#div5{
+    background-color: yellow;
+    order: 0;
+    flex-grow: 1;
+}
+
+#div6{
+    background-color: purple;
+    order: 0;
+}
