@@ -1,0 +1,126 @@
+
+/* In general Body details of webpage */
+body{
+    margin: 0px;   
+}
+
+
+/* _____________SECTION: Body header and background image header_____________ */
+#body-header{
+
+    height: 65vh;
+    margin-top:-16px;
+    background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000000020_1549743985_macbook_mouse.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+    background-attachment: fixed;
+}
+
+/* _________SECTION : nav bar section_____________ */
+
+.horizontal-list{
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+    
+}
+
+/* general class to align a text in center */
+
+.text-center{
+    text-align: center;
+}
+
+
+/* Design for all elements in list */
+.horizontal-list li{
+    display: inline-block;
+    margin: 30px 15px 0px 15px;
+    font-size: 1.2rem;
+}
+
+/* this applies to all anchor tags in the list */
+.horizontal-list li a{
+    color:white;
+    text-decoration: none;
+    
+}
+
+/* for nav-menu class */
+
+
+.nav-menu li a{
+    transition: color 0.5s,  border-bottom 4s;
+}
+
+/*  hover and color-transitions for nav-bar */
+
+.nav-menu li a:hover{
+    color:lightgrey;
+    padding: 5px;
+    border-bottom: 2px solid white;
+}
+
+
+/* _________SECTION : Name and Social-Icons_____________ */
+#name-social-container{
+    margin-top: 20vh;
+}
+#my-name{
+    color:white;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.social-icons li a i{
+    color:white;
+    padding: 10px;  
+    font-size: 1.2rem;  
+    border-radius: 50%;
+}
+
+.social-icons li a i:hover{
+    box-shadow: 0px 0px 6px 4px #FFCCCB ;
+}
+
+
+/* _________SECTION : About Section_____________ */
+#about{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+/*This is for image container*/
+#my-image{
+    height: 12rem;
+    width: 12rem;
+    margin: auto;
+    margin-top: -17vh;
+    
+}
+
+/*This is for actual image tag*/
+#my-image img{
+    height:100%;
+    width: 100%;
+    border-radius: 50%;
+    
+    
+}
+
+.about-text{
+    height: auto;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
