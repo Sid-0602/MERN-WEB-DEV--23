@@ -1,0 +1,43 @@
+#container1{
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    border: 2px solid black;
+    background-image: linear-gradient( to right ,red,blue,cyan);
+
+
+}
+
+#container2{
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    border: 2px solid black;
+    background-image: linear-gradient(120deg,red, blue, cyan 200px)
+}
+
+#container3{
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    border: 2px solid black;
+    background-image: linear-gradient(-135deg,red, blue, cyan 200px)
+}
+
+#container4{
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    border: 2px solid black;
+    background: repeating-linear-gradient(red, blue 30px);
+}
+
+
+/* This gives circular gradient */
+#container5{
+    width: 200px;
+    height: 200px;
+    margin: 40px;
+    border: 2px solid black;
+    background: radial-gradient(red,blue,cyan,green);
+}
