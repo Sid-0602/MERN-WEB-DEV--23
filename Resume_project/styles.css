@@ -4,6 +4,53 @@ body{
     margin: 0px;   
 }
 
+/*____SECTION STYLING FOR COMMON DESIGN ___*/
+.section{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.mb75px{
+    margin-bottom: 75px;
+}
+
+.text-highlight{
+    color: #2857a4;
+    font-weight: 600;
+}
+
+
+/*This section will allow us to set alternate color */
+.section:nth-child(2n){
+    background-color: lightgrey;
+}
+
+.section:nth-child(2n+1){
+    background-color: white;
+}
+
+.section:target{
+    background-color: cyan;
+}
+
+.section-heading{
+    width: auto;
+    padding: 20px 10px 10px;
+    margin: 10px auto;
+    font-weight: 400;
+}
+
+.section-heading span{
+    font-size: 40px;
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+}
 
 /* _____________SECTION: Body header and background image header_____________ */
 #body-header{
@@ -87,6 +134,7 @@ body{
 }
 
 
+
 /* _________SECTION : About Section_____________ */
 #about{
     height: auto;
@@ -100,6 +148,8 @@ body{
     width: 12rem;
     margin: auto;
     margin-top: -17vh;
+    box-shadow: 0px 0px 4px 6px #c8bd9f;
+    border-radius:50%;
     
 }
 
@@ -119,7 +169,174 @@ body{
     font-size: 1.5rem;
 }
 
+/* _________SECTION : Skills Section_____________ */
 
+.skills-display{
+    margin:30px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+
+}
+
+.skill-progress{
+    width: 7rem;
+    height: 1.4rem;
+    background-color: lightgray;
+    border-radius: 0.8rem;
+    border: 2px solid black;
+}
+
+.skills-display>div:hover{
+    box-shadow: -10px 10px 10px 10px grey;
+    margin-left: 10px;
+    margin-right: 10px;  
+} 
+
+.skill-progress>div{
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+.skill-progress-dsa{
+    width: 19rem;
+    height: 1.4rem;
+    background-color: lightgray;
+    border-radius: 0.8rem;
+    border: 2px solid black;
+}
+
+.skill-progress-css{
+    width: 10rem;
+    height: 1.4rem;
+    background-color: lightgray;
+    border-radius: 0.8rem;
+    border: 2px solid black;
+}
+
+.skill-progress-os{
+    width: 13rem;
+    height: 1.4rem;
+    background-color: lightgray;
+    border-radius: 0.8rem;
+    border: 2px solid black;
+}
+
+.skill-progress-database{
+    width: 13rem;
+    height: 1.4rem;
+    background-color: lightgray;
+    border-radius: 0.8rem;
+    border: 2px solid black;
+}
+
+/* percentage class */
+.mb-blue{
+    background-color: #2857a4;
+}
+
+.mb-orange{
+    background-color:orange;
+}
+
+.mb-red{
+    background-color: red;
+}
+
+.mb-black{
+    background-color: black;
+}
+.mb-golden{
+    background-color: goldenrod;
+}
+
+.mb-green{
+    background-color: green;
+}
+
+.mb-purple{
+    background-color: purple;
+}
+
+.mb-violet{
+    background-color: violet;
+}
+
+
+
+
+
+/* class for 80% skill level */
+.eighty-per{
+    width: 80%;
+    height: inherit;
+    border-radius: 0.8rem;
+}
+
+.ninty-per{
+    width: 90%;
+    height: inherit;
+    border-radius: 0.8rem;
+}
+
+.seventy-per{
+    width: 70%;
+    height: inherit;
+    border-radius: 0.8rem;
+}
+.sixty-per{
+    width: 70%;
+    height: inherit;
+    border-radius: 0.8rem;
+}
+
+.fifty-per{
+    width: 50%;
+    height: inherit;
+    border-radius: 0.8rem;
+}
+
+/* properties for skill name */
+.skill-name span{
+    padding: 5px;
+    font-size: 18px;
+    color:white;
+}
+
+
+/* _________SECTION : CONTACT ME Section_____________ */
+
+
+.contact-section{
+    width: 100%;
+    height: 75vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items: center;
+    background-image: linear-gradient(90deg,#2e4b92, #403066);
+}
+
+
+.contact-section span{
+    color:white;
+}
+
+.input-form{
+    width: 50%;
+    height: 200px;
+    border: 2px solid black;
+    
+}
+
+.contact-info{
+    width: 50%;
+    height: 200px;
+    border: 2px solid black;
+    display: inline-block;
+}
 
 
 
