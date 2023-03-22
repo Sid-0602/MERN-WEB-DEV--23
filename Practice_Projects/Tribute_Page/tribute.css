@@ -1,0 +1,32 @@
+#body{
+    margin: 0px;
+    color: white;
+    background-image: url(uwp2898660.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.general-styling{
+    text-align: center;
+    border: 2px white solid;
+    margin: 50px;
+}
+
+.title-space{
+    text-align: center;
+    text-transform: capitalize;
+}
+.container{
+    padding: 2px;
+    margin: 50px;
+}
+
+.images{
+
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    
+}
+
+
