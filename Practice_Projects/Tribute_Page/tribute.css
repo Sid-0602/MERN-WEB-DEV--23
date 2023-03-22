@@ -15,10 +15,12 @@
 .title-space{
     text-align: center;
     text-transform: capitalize;
+    
 }
 .container{
-    padding: 2px;
+    padding: 5px;
     margin: 50px;
+
 }
 
 .images{
@@ -26,7 +28,36 @@
     display: flex;
     text-align: center;
     justify-content: space-around;
-    
 }
+
+#about{
+    text-align: center;
+}
+
+/* Submit message */
+
+#sub-btn{
+    margin: 20px 50px 20px 20px;
+    padding: 3px;
+    border: 2px black solid;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+#btn{
+    padding: 5px;
+    border: 5px black solid;
+    background-color: white;
+    border-radius: 20%;
+}
+
+.hover-button button:hover{
+    background-color: white;
+    color:black;
+}
+
+
+
 
 
