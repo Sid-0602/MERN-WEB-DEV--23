@@ -1,0 +1,89 @@
+/*This is used to import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat&display=swap');
+
+/* Body characterstics */
+body{
+    background-color: antiquewhite;   
+}
+
+/*This is a universal CSS reset, used to remove all padding and margin used by different web browsers. */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ************* SECTION: NAVBAR****************** */
+nav{
+    font-family: 'IBM Plex Sans', Montserrat;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color:white;
+    
+}
+
+nav ul li{
+    padding: 0px 12px 10px;
+}
+
+.brand img{
+    width: 45px;
+    padding: 0px 8px;
+}
+
+/* ************* SECTION: BOTTOM BAR****************** */
+
+.container{
+    min-height: 70vh;
+    background-color: black;
+    color:white;
+    font-family: 'IBM Plex Sans', Montserrat;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 34px;
+    
+
+}
+.bottom{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    height: 130px;
+    background-color: black;
+    color: white;
+    bottom: 0;
+}
+
+.icons{
+    margin-top: 15px;
+}
+
+.icons i{
+    cursor: pointer;
+}
+
+#myProgressBar{
+    width: 80vw;
+    
+}
+
+
+/* ************* SECTION: CONTAINER ****************** */
