@@ -1,0 +1,18 @@
+
+/* This is active pseudo-class */
+a:active{
+    color:red;
+}
+
+p:active{
+    background-color: cyan;
+}
+
+/* This is visited pseudo-class */
+
+a:visited{
+    color:green;
+}
+
+/* This is */
+

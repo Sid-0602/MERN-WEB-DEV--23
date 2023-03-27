@@ -7,6 +7,12 @@ body{
     margin-top: 40px;
 }
 
+#social{
+    display: inline-block;
+    position: fixed;
+    background-color: aquamarine;
+    vertical-align: top;
+}
 
 main{
     width: 75%;
@@ -18,7 +24,7 @@ aside{
     display: inline-block;
     vertical-align: top;
     margin-left: 15px;
-
+    
 }
 
 #full-img{
@@ -94,6 +100,7 @@ li h4{
     color: black;
     font-size: 1.2rem;
     border-radius: 8px;
+    
 }
 
 button[type="submit"]{
@@ -151,6 +158,8 @@ ul li::before{
     color:#dc784e;
     font-size: 1.2rem;
 }
+
+
 
 
 
