@@ -1,0 +1,43 @@
+#container{
+    height: 500px; /*This adjusts itself to the inside content*/
+    width: 500px;
+    background-color: pink;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center; /*this works across cross-axis */
+    justify-content: center;/*This shifts the content to start from end */
+    /* It has 6 properties: flex-start,center, flex-end, space-around, space-between, space-evenly */
+    /*justify-content works across main axis. */
+    
+}
+
+#container div{
+    height: 100px;
+    max-height: 300px;
+    width: 100px;
+    
+}
+
+#div1{
+
+    background-color: aqua;
+    order: 1; /* This will decide the order of flex boxes*/
+    
+    
+}
+#div2{
+    background-color: blue;
+    order: 2;
+    
+    
+}
+#div3{
+    background-color: green;
+  
+    
+}
+#div4{
+    background-color: yellow;
+    
+}
