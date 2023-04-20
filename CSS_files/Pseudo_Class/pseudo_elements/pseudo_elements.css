@@ -1,0 +1,42 @@
+
+/* this gives effect to all first letters of all paragraphs */
+.styled-first-letter::first-letter{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+p{
+    background-color: lightblue;
+}
+h2::before{
+    content: 'Before';
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+p::after{
+    content: '';
+    background-image: url(logo.png);
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+ul{
+    list-style: none;
+
+}
+
+li:before{
+    content: '';
+    display: inline-block;
+    background-image: url(logo.png);
+    background-size: contain;
+    height: 40px;
+    width: 40px;
+}
