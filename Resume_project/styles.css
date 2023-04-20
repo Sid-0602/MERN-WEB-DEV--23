@@ -4,6 +4,8 @@ body{
     margin: 0px;   
 }
 
+body div:link{text-decoration: none;}
+
 .highlight-color{
     color: #2857a4;
     text-transform: capitalize;
@@ -41,7 +43,8 @@ body{
 }
 
 .section:target{
-    background-color: cyan;
+    box-shadow: 0px 0px 6px 4px grey;
+    
 }
 
 .section-heading{
@@ -77,7 +80,6 @@ body{
     list-style: none;
     padding-left: 0px;
     margin: 0px;
-    
 }
 
 /* general class to align a text in center */
@@ -119,11 +121,19 @@ body{
 
 /* _________SECTION : Name and Social-Icons_____________ */
 #name-social-container{
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 #my-name{
     color:white;
     font-size: 3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+#my-tagline{
+    color:white;
+    font-size: 1.5rem;
     letter-spacing: 0.1rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -350,7 +360,7 @@ body{
     content:'';
     position: absolute;
     top: 25%;
-    right: -7.9%;
+    right: -8.2%;
     border-radius: 50%;
     width: 0.8rem;
     height: 0.8rem;
@@ -362,7 +372,7 @@ body{
     content:'';
     position: absolute;
     top: 25%;
-    left: -9.6%;
+    left: -9.3%;
     border-radius: 50%;
     width: 0.8rem;
     height: 0.8rem;
@@ -433,8 +443,6 @@ body{
     margin: 30px;
     position: relative;
     width: 70%;
-   
-    
 
 }
 
@@ -464,7 +472,7 @@ body{
     content:'';
     position: absolute;
     top: 25%;
-    right: -7.9%;
+    right: -8.2%;
     border-radius: 50%;
     width: 0.8rem;
     height: 0.8rem;
@@ -476,7 +484,7 @@ body{
     content:'';
     position: absolute;
     top: 25%;
-    left: -9.6%;
+    left: -9.2%;
     border-radius: 50%;
     width: 0.8rem;
     height: 0.8rem;
@@ -499,4 +507,193 @@ body{
     top: 30%;
     transform: rotate(270deg);
     z-index: 2;
+}
+
+
+/* _________SECTION : Portfolio Projects____________ */
+
+.projects-space{
+    margin: 30px;
+    width: 70%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*
+.projects-space div{
+    margin: 20px;
+    padding: 10px;
+    background-color: lightgray;
+    width: 300px;
+}
+
+*/
+
+.outer-design{
+    border: 3px solid black;
+    margin: 30px;
+    padding: 10px;
+    width: 300px;
+    overflow: auto;
+    border-radius: 10px;
+
+}
+
+#project-detail-1{
+    height: 0;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#project-detail-1:target{
+    height: 50%;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    top: 25%;
+    left:25%;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+
+#project-detail-2{
+    height: 0;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#project-detail-2:target{
+    height: 50%;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    top: 25%;
+    left:25%;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+
+#project-detail-3{
+    height: 0;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#project-detail-3:target{
+    height: 50%;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    top: 25%;
+    left:25%;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+
+#project-detail-4{
+    height: 0;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#project-detail-4:target{
+    height: 50%;
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+    top: 25%;
+    left:25%;
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+
+
+
+
+/* _________SECTION : Contact Me____________ */
+
+
+.form-section{
+    height: 75vh;
+    width: auto;
+    background-image: linear-gradient(45deg,#28559f,#403066);
+    margin: 0px;
+
+}
+
+.sides-format{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+}
+
+
+#left-section{
+    color:white;
+    width: 400px;
+    border: 3px white solid;
+    margin: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+#left-section input{
+    margin: 10px;
+    padding: 10px;
+    width: 350px;
+}
+
+#left-section dec{
+     margin: 10px;
+    padding: 10px;
+    width: fit-content;
+}
+
+
+#right-section{
+    color:white;
+    width: 400px;
+    border: 3px white solid;
+    margin: 50px;
+    padding: 10px;
+}
+
+#right-section h1,h3{
+    font-weight: bolder;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#right-section ul li{
+    font-size: 1.2rem;
+    margin: 10px;
 }
