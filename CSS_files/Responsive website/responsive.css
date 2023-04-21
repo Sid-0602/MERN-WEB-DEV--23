@@ -1,0 +1,46 @@
+.body{
+    margin: 0px;    
+}
+
+#div1{
+   width: 60%;
+    padding:10px;
+    border: 2px solid black;
+}
+
+
+@media  screen and (max-width:900px){
+    
+    #div1{
+        width: 90%;
+        padding:10px;
+        border: 2px solid blue;
+        background-color: green;
+    }
+}
+
+@media  screen and (max-width:600px){
+    
+    #div1{
+        width: 100%;
+        padding:10px;
+        border: 2px solid blue;
+        background-color: cyan;
+    }
+}
+
+
+/*This is for mobile first*/
+
+@media  screen and (min-width:600px) {
+    #div{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:900px) {
+    #div{
+        width: 60%;
+    }
+}
+
