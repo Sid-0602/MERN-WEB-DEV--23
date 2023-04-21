@@ -1,0 +1,57 @@
+
+.cube{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    margin: 100px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transform: rotateX(25deg) rotateY(-25deg);
+
+}
+
+.face {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transition: all 1s;
+   
+
+}
+
+.one{
+    background-color: cyan;
+    z-index: 10;
+}
+
+.two{
+    background-color: orange;
+    transform: rotateY(90deg) translateZ(-100px) translateX(-100px);
+}
+
+.three{
+    background-color: palevioletred;
+    transform: rotateY(-90deg) translateZ(-100px) translateX(100px);
+}
+
+.four{
+    background-color: brown;
+    transform: rotateX(90deg) translateY(100px) translateZ(100px);
+}
+
+.five{
+    background-color: green;
+    transform: rotateX(90deg) translateZ(-100px) translateY(100px);
+} 
+
+.six{
+    background-color: blueviolet;
+    transform: translateZ(200px);
+}
+    
+
+.one:hover{
+    transform: rotateX(40deg) rotateY(40deg);
+}
