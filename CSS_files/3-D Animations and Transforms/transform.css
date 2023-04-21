@@ -1,0 +1,17 @@
+.div{
+    height: 100px;
+    width: 100px;
+    margin: 20%;
+    position: absolute;
+    background-color: red;
+    transform: rotate(90deg);
+    transition: all 0.5s ease-in-out ;
+
+}
+
+.div:hover{
+    
+    border-radius: 100%;
+    transform: translateX(200px) scale(1.5);
+    background-color: aqua;
+}
