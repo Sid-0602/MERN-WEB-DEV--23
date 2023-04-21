@@ -1,0 +1,33 @@
+/*animations */
+
+@keyframes changeShape{
+    from{
+        border-radius: 0%;
+    }
+    25%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: green;
+    }
+    75%{
+        background-color: cyan;
+    }
+    to{
+        border-radius: 100%;
+        
+    }
+}
+
+
+.div{
+    height: 100px;
+    width: 100px;
+    top: 20%;
+    left: 20%;
+    position: absolute;
+    background-color: red;
+    animation: changeShape 1s ease-in-out 100 alternate;
+
+}
+
