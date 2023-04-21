@@ -423,10 +423,10 @@ body div:link{text-decoration: none;}
 
 .timeline-divider{
     position: absolute;
-    height: 67%;
+    height: 66%;
     width: 0;
     border: 3px dashed #2857a4 ;
-    margin-top: 5%;
+    margin-top: 6%;
     left: 50%;
 
 }
@@ -436,6 +436,26 @@ body div:link{text-decoration: none;}
     top: 25%;
     transform: rotate(270deg);
     z-index: 2;
+}
+
+
+/*responsive for education section */
+
+@media screen and (max-width:600px){
+    .timeline-divider{
+        left:5%;
+        margin-top: 18%;
+        height: 65%;
+        
+    }
+    .timeline-box{
+        left: 12% !important;
+        width: 80%;
+    }
+    .timeline-box::after{
+        left:-11% !important;
+    }
+    
 }
 
 
@@ -498,10 +518,10 @@ body div:link{text-decoration: none;}
 
 .timeline-divider-exp{
     position: absolute;
-    height: 49%;
+    height: 45%;
     width: 0;
     border: 3px dashed #2857a4 ;
-    margin-top: 5%;
+    margin-top: 7%;
     left: 50%;
 
 }
@@ -513,15 +533,34 @@ body div:link{text-decoration: none;}
     z-index: 2;
 }
 
+/*responsive for experience section */
+@media screen and (max-width:600px){
+    .timeline-divider-exp{
+        left:5%;
+        margin-top: 20%;
+        height: 45%;
+        
+    }
+    .timeline-box-exp{
+        left: 12% !important;
+        width: 80%;
+    }
+    .timeline-box-exp::after{
+        left:-11% !important;
+    }
+    
+}
 
 /* _________SECTION : Portfolio Projects____________ */
 
 .projects-space{
     margin: 30px;
-    width: 70%;
+    height: 50%;
+    width: 80%;
     position: relative;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 /*
@@ -554,6 +593,7 @@ body div:link{text-decoration: none;}
     transition: all 0.5s ease-in-out;
     border: 3px solid black;
     border-radius: 10px;
+    overflow-wrap: break-word;
 }
 
 #project-detail-1:target{
@@ -565,6 +605,7 @@ body div:link{text-decoration: none;}
     left:25%;
     background-color: lightgray;
     border: 2px solid black;
+    overflow-wrap: break-word;
 }
 
 
@@ -578,6 +619,7 @@ body div:link{text-decoration: none;}
     transition: all 0.5s ease-in-out;
     border: 3px solid black;
     border-radius: 10px;
+    overflow-wrap: break-word;
 }
 
 #project-detail-2:target{
@@ -589,6 +631,7 @@ body div:link{text-decoration: none;}
     left:25%;
     background-color: lightgray;
     border: 2px solid black;
+    overflow-wrap: break-word;
 }
 
 
@@ -602,6 +645,7 @@ body div:link{text-decoration: none;}
     transition: all 0.5s ease-in-out;
     border: 3px solid black;
     border-radius: 10px;
+    overflow-wrap: break-word;
 }
 
 #project-detail-3:target{
@@ -613,6 +657,7 @@ body div:link{text-decoration: none;}
     left:25%;
     background-color: lightgray;
     border: 2px solid black;
+    overflow-wrap: normal;
 }
 
 
@@ -626,6 +671,7 @@ body div:link{text-decoration: none;}
     transition: all 0.5s ease-in-out;
     border: 3px solid black;
     border-radius: 10px;
+    overflow-wrap: break-word;
 }
 
 #project-detail-4:target{
@@ -637,7 +683,9 @@ body div:link{text-decoration: none;}
     left:25%;
     background-color: lightgray;
     border: 2px solid black;
+    overflow-wrap: break-word;
 }
+
 
 
 
@@ -647,10 +695,12 @@ body div:link{text-decoration: none;}
 
 
 .form-section{
-    height: 75vh;
-    width: auto;
+    height: 75%;
+    width: 100%;
     background-image: linear-gradient(45deg,#28559f,#403066);
     margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
@@ -658,13 +708,13 @@ body div:link{text-decoration: none;}
     display: flex;
     flex-direction:row;
     justify-content: space-evenly;
+    
 }
 
 
 #left-section{
     color:white;
-    width: 400px;
-    border: 3px white solid;
+    width: 60%;
     margin: 50px;
     padding: 10px;
     text-align: center;
@@ -672,8 +722,8 @@ body div:link{text-decoration: none;}
 
 
 #left-section dec{
-     margin: 10px;
-    padding: 10px;
+    margin: 3%;
+    padding: 2%;
     width: fit-content;
 }
 
@@ -702,10 +752,9 @@ input{
 
 #right-section{
     color:white;
-    width: 400px;
-    border: 3px white solid;
-    margin: 50px;
-    padding: 10px;
+    width: 60%;
+    margin: 10%;
+    
 }
 
 #right-section h1,h3{
@@ -716,5 +765,36 @@ input{
 
 #right-section ul li{
     font-size: 1.2rem;
-    margin: 10px;
+    margin: 5%;
+}
+
+@media screen and (max-width:600px){
+    
+    .form-section{
+        height: 75%;
+        width: 100% !important;
+        background-image: linear-gradient(45deg,#28559f,#403066) !important;
+    
+    }
+    .sides-format{
+        flex-wrap: wrap;
+    }
+    
+    
+    
+    #left-section{
+        width: 100%;
+        text-align: center;
+    }
+    
+    #left-section dec{
+        margin: 4%;
+        padding: 4%;
+    }
+
+    #right-section{
+        width: 100%;
+        margin-right: 3%;
+        text-align: center;
+    }
 }
