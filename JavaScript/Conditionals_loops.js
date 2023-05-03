@@ -59,3 +59,11 @@ while(i<=5){
 for(x=1;x<=5;x++){
     console.log("Hello "+x+" time")
 }
+
+var a = 2;
+var b = 0;
+while(a <= 4){
+    a++;
+    b += a * 2;
+    console.log(b);
+}
