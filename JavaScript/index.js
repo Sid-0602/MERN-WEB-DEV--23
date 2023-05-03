@@ -35,3 +35,15 @@ var sentence = "Hello"
 console.log("Original Sentence: ",sentence);
 sentence+=2; //js automatically typecasts the number 
 console.log("Sentence after updation: ",sentence);
+
+
+// == vs === 
+
+console.log(" == VS ===");
+
+console.log(1==1);
+
+console.log(1=='1');
+
+//strict equality operator will also check the type of variable i.e it is more strict.
+console.log(1==='1');
