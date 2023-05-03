@@ -14,3 +14,18 @@ console.log(int_to_string);
 //typeof operator: 
 console.log("This is typeof Operator: ");
 console.log(typeof(10));
+
+
+//This is tricky question.
+var x = 4;
+var y = x++;
+y += 1;
+console.log(y);
+
+
+console.log("Automatic Type Conversion:");
+
+var sentence = "Hello"
+console.log("Original Sentence: ",sentence);
+sentence+=2; //js automatically typecasts the number 
+console.log("Sentence after updation: ",sentence);
