@@ -1,6 +1,5 @@
 //Function expressions is way to create a function. 
 
-
 var factorial = function fact(n){  //this is named function exp.
 
     var ans=1;
@@ -22,7 +21,7 @@ var factorial2 = function (n){  //this is unnamed/anonymous  function exp.
 
 };
 
-
+console.log("Hello!!")
 console.log(factorial);
 console.log(factorial2);
 console.log(factorial(5));
