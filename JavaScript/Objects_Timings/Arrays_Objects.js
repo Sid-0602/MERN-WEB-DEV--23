@@ -1,6 +1,6 @@
 // Arrays and Objects are same in JavaScript
 
-var arr = [20,30,40,50,,,,100];
+var arr = [20,30,40,50,100];
 console.log("****************The Array is *************");
 console.log(arr);
 console.log("The lenght of array is: ",arr.length);
@@ -25,3 +25,17 @@ var size = Object.keys(obj).length;
 console.log("Size of object is: ",size);
 console.log("!! Object and Array are same in JS !!");
 
+
+//Itrating over array: 
+
+arr.prop1="demo"; //this does not change size of array. 
+console.log(arr);
+
+//this changes the size of array.
+arr[7]=45;
+console.log(arr);
+
+//iteration: 
+for(var prop in arr){
+    console.log(prop, arr[prop]);
+}
