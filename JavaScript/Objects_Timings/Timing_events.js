@@ -31,3 +31,5 @@ function alert(){
 } 
 
 var id = setInterval(alert,2000); //this will execute the function in loop after same interval of time.
+
+
