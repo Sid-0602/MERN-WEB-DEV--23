@@ -9,20 +9,12 @@
 <body>
    <h1>Click here!!</h1>
    
-   <!-- <button id="btn" onclick="alert('Hello!!')">Say Hello</button> -->
-   <button id="btn"> Say Hello!! </button> 
+   <button id="btn1" onclick="alert('Hello!!')">Say Hello</button> <!-- This is inline JS function. -->
+   <button id="btn2"> Say Hello!! </button> 
 </body>
 
 <!-- Scripts should be added at end of HTML Structure  -->
 
-<script type="text/javascript">
-    //this is console part.
-    console.log("Hello! This is Console");
-
-    var hellobtn = document.getElementById('btn');
-    console.log(hellobtn);
-    hellobtn.addEventListener('click',function(){
-        alert('Hello Bachoooo');
-    })
+<script type="text/javascript" src="script.js">
 </script>
 </html>
