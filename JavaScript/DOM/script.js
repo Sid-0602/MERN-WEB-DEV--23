@@ -10,7 +10,6 @@ function sayBye(){
 }
 
 var hellobtn = document.getElementById('btn2');
-console.log(hellobtn);
 hellobtn.addEventListener('click',say_hello);
 hellobtn.addEventListener('click',sayBye); //there are 2 event listners for this button.
 
