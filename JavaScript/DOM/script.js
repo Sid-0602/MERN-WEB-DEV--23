@@ -11,7 +11,7 @@ function sayBye(){
 
 var hellobtn = document.getElementById('btn2');
 hellobtn.addEventListener('click',say_hello);
-hellobtn.addEventListener('click',sayBye); //there are 2 event listners for this button.
+hellobtn.addEventListener('click',sayBye); //there are 2 event listeners for this button.
 
 
 
