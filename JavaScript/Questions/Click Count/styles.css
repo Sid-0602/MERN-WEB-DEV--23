@@ -1,0 +1,15 @@
+#box{
+    height: 250px;
+    width: 250px;
+    margin: 100px auto;
+    cursor: pointer;
+    background-color: red;
+}
+
+#box:hover {
+    box-shadow: 0px 0px 30px blueviolet;
+}
+
+h1 {
+    text-align: center;
+}
