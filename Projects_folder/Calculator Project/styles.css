@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat&display=swap');
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Utility Classes */
+.text-center{
+    text-align: center;
+}
+
+.bg-red{
+    background-color: red;
+}
+.mx-auto{
+    margin: auto;
+}
+
+.m-w-20{
+    max-width: 20vw;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-col{
+    flex-direction: column;
+}
+
+.item-center{
+    align-items: center;
+}
+
+/* Styles */
+.button{
+    margin: 5px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.input{
+    
+    height: auto;
+    width: auto;
+    margin: 20px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.row{
+    margin: 0;
+}
+
+.row input{
+    margin: 10;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
