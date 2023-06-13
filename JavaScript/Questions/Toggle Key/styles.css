@@ -1,0 +1,19 @@
+body{
+    margin: 50px;
+}
+
+#app{
+    height: 75vh;
+    width: 75vw;
+    background-color: black;
+}
+
+#btn{
+
+}
+
+#text{
+    color: white;
+    
+}
+
