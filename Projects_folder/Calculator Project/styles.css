@@ -10,7 +10,9 @@ html, body{
 .text-center{
     text-align: center;
 }
-
+.big-btn{
+    font-size: 15px;
+}
 .bg-red{
     background-color: red;
 }
