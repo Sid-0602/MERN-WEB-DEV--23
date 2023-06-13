@@ -1,19 +1,76 @@
-body{
-    margin: 50px;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    min-height: 100vh;
+}
+
+body.active{
+    background-color: black;
+
 }
 
 #app{
-    height: 75vh;
-    width: 75vw;
-    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#btn{
 
+#toggle{
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#toggle .indicator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1px;
+    width: 35px;
+    height: 28px;
+    border-radius: 15px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+#toggle.active{
+    background-color: white;
+}
+#toggle.active .indicator{
+    left:70px;
+    transition: 0.5s;
+    margin-left: 10px;
 }
 
 #text{
-    color: white;
+    margin: 50px;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    color: black;
+    text-align: center;
     
+}
+
+#text.active{
+    color:white;
+    transition: 0.5s;
 }
 
