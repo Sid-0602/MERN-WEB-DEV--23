@@ -56,7 +56,7 @@ body.active{
 #toggle.active .indicator{
     left:70px;
     transition: 0.5s;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 #text{
