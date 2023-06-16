@@ -1,6 +1,8 @@
 let string="";
 let buttons = document.querySelectorAll('.button');
 
+
+//The "=>" symbol, also known as the equals greater than symbol or hashrocket, is a shorthand notation for defining functions in JavaScript. It is used to create a new type of function called an arrow function.
 Array.from(buttons).forEach((button)=>{
 
     button.addEventListener('click',(e)=>{
