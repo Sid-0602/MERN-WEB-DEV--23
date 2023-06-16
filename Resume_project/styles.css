@@ -223,9 +223,8 @@ body div:link{text-decoration: none;}
 
 
 .skill-progress-dsa{
-    
-    width: 19rem;
-    height: 1.4rem;
+    width: 12rem;
+    height: 1.5rem;
     background-color: lightgray;
     border-radius: 0.8rem;
     border: 2px solid black;
@@ -233,7 +232,7 @@ body div:link{text-decoration: none;}
 
 .skill-progress-css{
     width: 10rem;
-    height: 1.4rem;
+    height: 1.5rem;
     background-color: lightgray;
     border-radius: 0.8rem;
     border: 2px solid black;
@@ -241,7 +240,7 @@ body div:link{text-decoration: none;}
 
 .skill-progress-os{
     width: 13rem;
-    height: 1.4rem;
+    height: 1.5rem;
     background-color: lightgray;
     border-radius: 0.8rem;
     border: 2px solid black;
@@ -249,7 +248,15 @@ body div:link{text-decoration: none;}
 
 .skill-progress-database{
     width: 13rem;
-    height: 1.4rem;
+    height: 1.5rem;
+    background-color: lightgray;
+    border-radius: 0.8rem;
+    border: 2px solid black;
+}
+
+.skill-progress-algo{
+    width: 12rem;
+    height: 1.5rem;
     background-color: lightgray;
     border-radius: 0.8rem;
     border: 2px solid black;
@@ -323,9 +330,9 @@ body div:link{text-decoration: none;}
 
 /* properties for skill name */
 .skill-name span{
-    padding: 5px;
+    padding: 4px;
     font-size: 18px;
-    color:white;
+    color: white;
 }
 
 
@@ -364,7 +371,7 @@ body div:link{text-decoration: none;}
     content:'';
     position: absolute;
     top: 25%;
-    right: -8.2%;
+    right: -13.3%;
     border-radius: 50%;
     width: 0.8rem;
     height: 0.8rem;
@@ -376,7 +383,7 @@ body div:link{text-decoration: none;}
     content:'';
     position: absolute;
     top: 25%;
-    left: -9.3%;
+    left: -9.6%;
     border-radius: 50%;
     width: 0.8rem;
     height: 0.8rem;
@@ -496,7 +503,7 @@ body div:link{text-decoration: none;}
     content:'';
     position: absolute;
     top: 25%;
-    right: -8.2%;
+    right: -13.3%;
     border-radius: 50%;
     width: 0.8rem;
     height: 0.8rem;
@@ -508,7 +515,7 @@ body div:link{text-decoration: none;}
     content:'';
     position: absolute;
     top: 25%;
-    left: -9.2%;
+    left: -9.5%;
     border-radius: 50%;
     width: 0.8rem;
     height: 0.8rem;
