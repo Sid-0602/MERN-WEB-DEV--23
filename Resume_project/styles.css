@@ -4,10 +4,6 @@ body{
     margin: 0px;   
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 body div:link{text-decoration: none;}
 
 .highlight-color{
