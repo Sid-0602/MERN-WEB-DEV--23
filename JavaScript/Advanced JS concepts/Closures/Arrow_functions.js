@@ -26,4 +26,19 @@ console.log(double(2));
 
 
 
+//Binding in Arrow Function: 
+
+function Person(name){
+    this.name = name;
+    console.log(this);
+
+    setTimeout(function(){
+        console.log("This is for normal function: ");
+        console.log(this);
+    },1000)
+    //binding in Arrow is different as it takes reference from outside scope/reference.
+    setTimeout(() => console.log(this),1000); //using arrow function.
+}
+
+var p= new Person("Sid");
 
