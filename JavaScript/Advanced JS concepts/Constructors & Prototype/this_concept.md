@@ -31,3 +31,15 @@ eg:
   ![1687594383449](image/this_concept/1687594383449.png)
 
  Output: ![1687594416239](image/this_concept/1687594416239.png)
+
+
+## 2nd Rule "Explicit Binding Rule"
+
+This explicit binding allows us to tell JS what object we want to call inside function.call(object) and function.apply(object).
+
+
+![1687612955392](image/this_concept/1687612955392.png)
+
+* Hard-Binding in Js:
+
+  ![1687613846894](image/this_concept/1687613846894.png)
