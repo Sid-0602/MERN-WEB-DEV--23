@@ -6,8 +6,15 @@ In most cases, the value of `this` is determined by how a function is called (ru
 
 There are 4 rules/concepts to find out the value of "this", as function declaration is done in 4 ways only.
 
+## 1st Rule "new" keyword
 
-### 1st Rule "new" keyword
+#### What is the ‘new’ keyword primarily used for?
+
+
+```
+The ‘new’ keyword creates a new instance of an object from a function. The variables defined inside the function (using this.varName) are properties of the object. This object becomes the value of ‘this’ inside the function’s execution context. But primarily, the ‘new’ keyword is used to create a new instance of an object from a function (called a constructor function).
+```
+
 
 ![1687592927638](image/this_concept/1687592927638.png)
 
