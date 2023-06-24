@@ -42,4 +42,4 @@ This explicit binding allows us to tell JS what object we want to call inside fu
 
 * Hard-Binding in Js:
 
-  ![1687613846894](image/this_concept/1687613846894.png)
+  ![1687613846894](image/this_concept/1687613846894.png "Hard Binding Code Example")
