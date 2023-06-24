@@ -21,6 +21,7 @@ function ask(){
     console.log(this,this.name);
 }
 
+
 ask.call(john); //call function is asking ask() function to call john object.
 ask.apply(john);
 
