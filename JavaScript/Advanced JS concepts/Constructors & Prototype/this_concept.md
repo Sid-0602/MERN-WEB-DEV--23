@@ -30,7 +30,9 @@ eg:
 
   ![1687594383449](image/this_concept/1687594383449.png)
 
- Output: ![1687594416239](image/this_concept/1687594416239.png)
+Output:
+
+ ![1687594416239](image/this_concept/1687594416239.png)
 
 
 ## 2nd Rule "Explicit Binding Rule"
@@ -40,6 +42,17 @@ This explicit binding allows us to tell JS what object we want to call inside fu
 
 ![1687612955392](image/this_concept/1687612955392.png)
 
+
 * Hard-Binding in Js:
 
-  ![1687613846894](image/this_concept/1687613846894.png "Hard Binding Code Example")
+![1687613846894](image/this_concept/1687613846894.png "Hard Binding Code Example")
+
+Example for Hard Binding:
+
+![1687614096378](image/this_concept/1687614096378.png)
+
+Solution: 
+
+```
+The CN object gets hardly bound to the current execution context of the function using bind. The bind() function will bind the value of ‘this’ inside print() to the object you specify in its parenthesis (the CN object).
+```
