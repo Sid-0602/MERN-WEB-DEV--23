@@ -18,3 +18,9 @@ There are 4 rules/concepts to find out the value of "this", as function declarat
    1.2 This { } is linked to Vechile.prototype
    1.3  Vechile( ) function is called and this is assigned the object.
    1.4 If the function returns nothing, it returns { }.
+
+eg:
+
+  ![1687594383449](image/this_concept/1687594383449.png)
+
+ Output: ![1687594416239](image/this_concept/1687594416239.png)
