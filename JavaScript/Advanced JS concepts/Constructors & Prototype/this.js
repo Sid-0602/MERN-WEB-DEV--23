@@ -43,3 +43,28 @@ var localGreet = raj.greet.bind(raj); //this is hard-binded to "raj" object.
 localGreet();
 //It can be used for other functions like setTimeOut:
 setTimeout(raj.greet.bind(raj),1000);
+
+
+
+// Rule 3: "Implicit Binding": 
+
+var raj={
+    name: 'Raj',
+    greet: function(){
+        console.log('Hello',this);
+    }
+}
+
+raj.greet(); //this is implicit binding rule. "greet" function is called on raj object.
+
+var localAskFunc = raj.greet;
+console.log(localAskFunc);
+
+localAskFunc();
+
+
+// Rule 4: "Default Binding":
+function ask(){
+    console.log(this,this.name);
+} 
+ask();

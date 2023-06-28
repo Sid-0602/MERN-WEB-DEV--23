@@ -10,11 +10,9 @@ There are 4 rules/concepts to find out the value of "this", as function declarat
 
 #### What is the ‘new’ keyword primarily used for?
 
-
 ```
 The ‘new’ keyword creates a new instance of an object from a function. The variables defined inside the function (using this.varName) are properties of the object. This object becomes the value of ‘this’ inside the function’s execution context. But primarily, the ‘new’ keyword is used to create a new instance of an object from a function (called a constructor function).
 ```
-
 
 ![1687592927638](image/this_concept/1687592927638.png)
 
@@ -34,14 +32,11 @@ Output:
 
  ![1687594416239](image/this_concept/1687594416239.png)
 
-
 ## 2nd Rule "Explicit Binding Rule"
 
 This explicit binding allows us to tell JS what object we want to call inside function.call(object) and function.apply(object).
 
-
 ![1687612955392](image/this_concept/1687612955392.png)
-
 
 * Hard-Binding in Js:
 
@@ -51,8 +46,19 @@ Example for Hard Binding:
 
 ![1687614096378](image/this_concept/1687614096378.png)
 
-Solution: 
+Solution:
 
 ```
 The CN object gets hardly bound to the current execution context of the function using bind. The bind() function will bind the value of ‘this’ inside print() to the object you specify in its parenthesis (the CN object).
 ```
+
+## 3rd Rule "Implicit Binding Rule"
+
+![1687923677047](image/this_concept/1687923677047.png)
+
+![1687923691715](image/this_concept/1687923691715.png)
+
+
+## 4th Rule "Defualt Binding Rule"
+
+![1687924078906](image/this_concept/1687924078906.png)
