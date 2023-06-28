@@ -3,13 +3,13 @@
 
 // Rule 1: "new" keyword
 
-//It returns Vechile object with empty value.
-function Vechile(name){
+//It returns Vehicle object with empty value.
+function Vehicle(name){
     this.name = name; //in this step, "this" is assigned the name into empty object 
     console.log(this);
 }
 
-new Vechile('Car');
+new Vehicle('Car');
 
 // Rule 2: "Explicit Binding": 
 
@@ -24,6 +24,7 @@ function ask(){
 
 ask.call(john); //call function is asking ask() function to call john object.
 ask.apply(john);
+ask(john); // this returns "window" (global scope) because it does not have explicit binding, hence it has "default binding" 
 
 
 //Hard Binding Rule: 

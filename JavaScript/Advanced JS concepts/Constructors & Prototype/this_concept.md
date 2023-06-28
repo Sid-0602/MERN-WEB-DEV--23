@@ -58,7 +58,11 @@ The CN object gets hardly bound to the current execution context of the function
 
 ![1687923691715](image/this_concept/1687923691715.png)
 
-
 ## 4th Rule "Defualt Binding Rule"
 
 ![1687924078906](image/this_concept/1687924078906.png)
+
+
+Note: In combination like the following: 
+
+![1687935683722](image/this_concept/1687935683722.png)
