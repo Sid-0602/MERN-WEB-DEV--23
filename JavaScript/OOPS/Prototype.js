@@ -33,3 +33,29 @@ Vehicle_1.getPrice();
 Vehicle.prototype.color = "Black";
 console.log(Vehicle_1.color);
 console.log(Vehicle_2.color);
+
+
+//  Dunder Proto:    __Proto__ 
+
+console.log(Vehicle_1.__proto__);
+console.log(Vehicle_2.__proto__);
+
+//Note: Use of Dunder proto is deprecated from ES6 version of JS.
+
+//Alternative: Use of getPrototypeOf:
+console.log("Alternate method: ",Object.getPrototypeOf(Vehicle_1));
+
+//isPrototypeOf: 
+console.log("IS method: ",Vehicle.prototype.isPrototypeOf(Vehicle_1));
+
+//check if property is inherited from Parent Function or Prototype: 
+console.log("No. of Wheels : ",Vehicle_1.hasOwnProperty('numWheels'));
+console.log("Price : ",Vehicle_1.hasOwnProperty('price'));
+console.log("Get Price : ",Vehicle_1.hasOwnProperty('getPrice'));
+console.log("Color : ",Vehicle_1.hasOwnProperty('color'));
+
+//Property changes in Object specifically: 
+Vehicle_1.color = "White";
+console.log("Color in Prototype: ",Vehicle.prototype.color);
+console.log("Color in Vehicle 1: ",Vehicle_1.color);
+console.log("Color in Vehicle 2: ",Vehicle_2.color);
