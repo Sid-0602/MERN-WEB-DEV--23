@@ -45,3 +45,6 @@ B.prototype.color = "green" ;
 Object.prototype.color = "pink" ;
 
 console.log(obj1.color, obj2.color, obj4.color, obj3.color);
+
+
+
