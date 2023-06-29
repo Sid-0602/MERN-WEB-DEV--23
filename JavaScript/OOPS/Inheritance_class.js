@@ -8,7 +8,7 @@ var Vehicle = class{
     }
 
     getPrice(){
-        return this.pricel
+        return this.price;
     }
 
     printDescription(){
