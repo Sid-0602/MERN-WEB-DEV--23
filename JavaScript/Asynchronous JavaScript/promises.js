@@ -44,7 +44,7 @@ wait_promise
         console.log(data);
     })
     .catch((error)=>{
-        console.log("Error Occured: " , error);
+        console.log("Error Occurred: " , error);
     });
 
 
