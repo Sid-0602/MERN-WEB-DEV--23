@@ -63,7 +63,6 @@ How to escape Call Back Hell?
 * So these promises are put in the event queue so that they don’t block subsequent JS code. Also once the results are returned, the event queue finishes its operations.
 * There are also other helpful keywords and methods like async, wait, set timeout() to simplify and make better use of callbacks.
 
-
 ## Task Queues, Micro-Task Queues and Event Loop:
 
 ### Event Loop
@@ -75,7 +74,6 @@ JavaScript has a runtime model based on an  **event loop** , which is responsibl
 An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty.
 
 #### Working of Event Loop:
-
 
 ![1688178140193](image/concepts/1688178140193.png)
 
@@ -92,3 +90,55 @@ That is where the event loop comes into the picture, it takes the first event fr
 Tasks Queues in JavaScript are used to schedule tasks to be run by standard mechanisms such as initializing a program, an event callback being run, or an interval or timeout being fired . These store the callbacks of browser API's function like setTimeout() and setInterval().
 
 Micro-task Queues : These store the callbacks of Promises. Hence they have high priority than task queues.
+
+
+## Async
+
+The **`async function`** declaration declares an async function where the `await` keyword is permitted within the function body. The `async` and `await` keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
+
+
+eg code:
+
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // Expected output: "resolved"
+}
+
+asyncCall();
+
+### Syntax:
+
+
+```
+async function name(param0) {
+  statements
+}
+async function name(param0, param1) {
+  statements
+}
+async function name(param0, param1, /* … ,*/ paramN) {
+  statements
+}
+```
+
+### Paramaeters and Return Value
+
+`name`The function's name.
+
+`param` **Optional**The name of an argument to be passed to the function.
+
+`statements` **Optional**The statements comprising the body of the function. The `await` mechanism may be used.
+
+[Return value]()
+
+A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which will be resolved with the value returned by the async function, or rejected with an exception thrown from, or uncaught within, the async function.
