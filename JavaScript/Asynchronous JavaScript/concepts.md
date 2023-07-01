@@ -86,3 +86,9 @@ Here the callback function in the event queue has not yet run and is waiting for
 That is where the event loop comes into the picture, it takes the first event from the Event Queue and places it onto the stack i.e. in this case the callback function. From here, this function executes calling other functions inside it, if any.
 
 ![1688178237902](image/concepts/1688178237902.png)
+
+### Tasks Queues and Micro-Task Queues:
+
+Tasks Queues in JavaScript are used to schedule tasks to be run by standard mechanisms such as initializing a program, an event callback being run, or an interval or timeout being fired . These store the callbacks of browser API's function like setTimeout() and setInterval().
+
+Micro-task Queues : These store the callbacks of Promises. Hence they have high priority than task queues.
