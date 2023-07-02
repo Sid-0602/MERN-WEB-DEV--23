@@ -1,22 +1,28 @@
+'use strict';
 //defining a task: 
-const tasks = [];
+var tasks = [];
 const taskList = document.getElementById('list');
 const addTaskInput = document.getElementById('add');
 const tasksCounter = document.getElementById('tasks-counter');
 
-console.log('JS has started working!!');
+
+
+function fetchTodos(){
+
+}
 
 
 function addTaskToDOM(task){
     const li=document.createElement('li');
     li.innerHTML=`
-          <input type="checkbox" id="${task.id}" ${task.done? 'checked':''}class="custom-checkbox">
-          <label for="${task.id}">${task.text}</label>
+          <input type="checkbox" id="${task.id}" ${task.completed? 'checked':''}class="custom-checkbox">
+          <label for="${task.id}">${task.title}</label>
           <img src="bin.svg" class="delete" data-id="${task.id}" />
     `;
 
     taskList.append(li);
 }
+
 function renderList(){
     taskList.innerHTML=''; //empty the list first.
     for(let i=0;i<tasks.length;i++){
@@ -33,7 +39,7 @@ function toggleTask(taskID){
 
     if(task.length>0){
         const currentTask = task[0];
-        currentTask.done = !currentTask.done;
+        currentTask.completed = !currentTask.completed;
         renderList();
         showNotification("Task toggled Successfully")
         return;
@@ -43,7 +49,7 @@ function toggleTask(taskID){
 
 function deleteTask(taskId){
     //new task is filtered with the task with the value of taskID missing.
-    const newTasks = tasks.filter(function(task){
+    let newTasks = tasks.filter(function(task){
         return task.id!==taskId; 
     })
 
@@ -88,5 +94,28 @@ function handleInputKeyPress(e){
     
 }
 
+
+function handleClickListener(e){
+    const target = e.target;
+    console.log(target);
+
+    if(target.className=='delete'){
+        const taskId = target.dataset.id;
+        deleteTask(taskId);
+        return;
+    }else if(target.className=='custom-checkbox'){
+        const taskId = target.id;
+        toggleTask(taskId);
+        return;
+    }
+}
+
 //adding event Listener to addTaskInput. 
-addTaskInput.addEventListener('keyup',handleInputKeyPress);
+
+function initializeApp(){
+    addTaskInput.addEventListener('keyup',handleInputKeyPress);
+    document.addEventListener('click',handleClickListener);
+}
+
+
+initializeApp();
