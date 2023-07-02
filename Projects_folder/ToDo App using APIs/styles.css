@@ -1,12 +1,29 @@
+body{  bbackground: rgb(1,0,13);
+  background: linear-gradient(90deg, rgba(1,0,13,1) 0%, rgba(0,5,8,1) 100%, rgba(0,212,255,1) 100%);
+}
+#title{
+  color: white;
+}
+#add{
+  background-color: beige;
+  border-radius: 20px;
+}
+#total-tasks{
+  background-color: beige;
+  padding: 5px;
+  border-radius: 10px;
+}
 * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
   }
   #container {
     width: 500px;
     margin: 0 auto;
   }
   ul {
+    border-radius: 20px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,6 +31,7 @@
   }
   ul li {
     padding: 10px;
+    background: #f3f3f3;
     /* padding-left: 0; */
     display: flex;
     justify-content: space-between;
@@ -21,7 +39,8 @@
     align-items: center;
   }
   ul li:hover {
-    background: #f3f3f3;
+    
+    box-shadow: beige;
   }
   #list input {
     padding: 0;

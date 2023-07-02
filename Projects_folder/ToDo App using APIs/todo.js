@@ -6,7 +6,8 @@ const tasksCounter = document.getElementById('tasks-counter');
 
 console.log('JS had started');
 
-function fetchTodos(){
+async function fetchTodos(){
+    /*
     console.log('GET is fetched');
     //this is GET request API. 
     fetch('https://jsonplaceholder.typicode.com/todos')
@@ -19,7 +20,17 @@ function fetchTodos(){
     })
     .catch(function(error){
         console.log('error',error);
-    })
+    }) */
+
+    try{
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos');
+        const data = await response.json();
+        tasks = data.slice(0,10);
+        renderList();
+    } catch(error){
+        console.log('error',error);
+    }
+    
 }
 
 
@@ -44,8 +55,10 @@ function renderList(){
 }
 
 function toggleTask(taskID){
+    
+    
     const task = tasks.filter(function(task){
-        return task.id === taskID;
+        return task.id === taskID
     });
 
     if(task.length>0){
@@ -70,7 +83,7 @@ function deleteTask(taskId){
 }
 
 function addTask(task){
-    if(task){
+    if(task){ 
         tasks.push(task);
         renderList();
         showNotification('Task added successfully');
@@ -93,9 +106,9 @@ function handleInputKeyPress(e){
         }
 
         const task = {
-            title : task,
+            title : text,
             id: Date.now().toString(),
-            done: false
+            completed: false
         }
     
         e.target.value = ''; //this makes the text box empty again. 
