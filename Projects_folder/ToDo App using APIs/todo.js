@@ -1,14 +1,25 @@
-'use strict';
 //defining a task: 
 var tasks = [];
 const taskList = document.getElementById('list');
 const addTaskInput = document.getElementById('add');
 const tasksCounter = document.getElementById('tasks-counter');
 
-
+console.log('JS had started');
 
 function fetchTodos(){
-
+    console.log('GET is fetched');
+    //this is GET request API. 
+    fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(function(response){
+        console.log(response);
+        return response.json();
+    }).then(function(data){
+        tasks = data.slice(0,10);
+        renderList();
+    })
+    .catch(function(error){
+        console.log('error',error);
+    })
 }
 
 
@@ -82,7 +93,7 @@ function handleInputKeyPress(e){
         }
 
         const task = {
-            text,
+            title : task,
             id: Date.now().toString(),
             done: false
         }
