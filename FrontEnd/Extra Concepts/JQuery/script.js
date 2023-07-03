@@ -3,7 +3,6 @@
 var para1=document.getElementById('para1');
 para1.innerHTML = "This Updated by JavaScript";
 
-
 //Using JQuery:
 
 // Step 1: Fetch the desired element.
