@@ -28,3 +28,33 @@ $('#para3').hide();
 
 //fetch width of para: 
 $('#para1').width(100);
+
+/*CSS Selector Property */
+
+$('#para1').css('color','red');
+
+$('para2').css("fontSize","100px");
+
+$('div').css({
+    height: "50px",
+    width: "100px",
+});
+
+$('div').css(
+    "backgound-color","red"
+);
+
+
+/*Event Handling in jQuery */
+
+//On-click event
+$('div').click(function(){
+    alert("Div Clicked!!");
+});
+
+$('div').on('click',function(){
+    alert("Div Clicked!!");
+})
+
+
+//
