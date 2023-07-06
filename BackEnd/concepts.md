@@ -38,3 +38,15 @@ Here,
 4. argv[argc] is a NULL pointer.
 5. argv[0] holds the name of the program.
 6. argv[1] points to the first command line argument and argv[argc-1] points to the last argument.
+
+## Creating First Server
+
+1. Load http module :
+
+   ![1688610694669](image/concepts/1688610694669.png)
+2. Create HTTP server and listen on port 3000 for requests:
+
+   ![1688610754762](image/concepts/1688610754762.png)
+3. Listen for requests on port 3000, and as a cakkback function, have the port listened on logged.
+
+   ![1688610802929](image/concepts/1688610802929.png)
