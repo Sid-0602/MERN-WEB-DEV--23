@@ -80,7 +80,7 @@ You can also install nodemon as a development dependency:
 npm install --save-dev nodemon # or using yarn: yarn add nodemon -D
 ```
 
-Usage
+#### Usage
 
 nodemon wraps your application, so you can pass all the arguments you would normally pass to your app:
 
