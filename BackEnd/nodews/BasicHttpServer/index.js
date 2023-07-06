@@ -10,6 +10,7 @@ function requestHandler(req,res){
     res.writeHead(200,{'content-type':'text/html'});
     
     //fileSystem == fs. 
+    /*
     fs.readFile('./index.html',function(err,data){
         if(err){
             console.log("error",err);
@@ -19,6 +20,31 @@ function requestHandler(req,res){
         return res.end(data);
 
     });
+
+    */
+
+    //Code to integrate web pages: 
+
+    let filePath; 
+    switch(req.url){
+        case '/':
+            filePath = './index.html'
+            break;
+        case '/profile':
+            filePath = './profile.html'
+            break
+        default:
+            filePath = './404.html'
+    }
+
+    fs.readFile(filePath,function(err,data){
+        if(err){
+            console.log('error');
+            return res.end('<h1>ERROR!!</h1>');
+        }
+
+        return res.end(data);
+    })
 }
 
 //creating server and running it using server.listen.
