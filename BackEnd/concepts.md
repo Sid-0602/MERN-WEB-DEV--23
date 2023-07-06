@@ -41,6 +41,8 @@ Here,
 
 ## Creating First Server
 
+### Steps for starting a basic server
+
 1. Load http module :
 
    ![1688610694669](image/concepts/1688610694669.png)
@@ -50,3 +52,38 @@ Here,
 3. Listen for requests on port 3000, and as a cakkback function, have the port listened on logged.
 
    ![1688610802929](image/concepts/1688610802929.png)
+
+### Status Code for HTTP responses
+
+Status code are returned for every request which is made to the server as a response.
+Read more [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
+### NodeMon
+
+nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+
+nodemon does **not** require *any* additional changes to your code or method of development. nodemon is a replacement wrapper for `node`. To use `nodemon`, replace the word `node` on the command line when executing your script.
+
+#### Installation
+
+Either through cloning with git or by using [npm](http://npmjs.org/) (the recommended way):
+
+```shell
+npm install -g nodemon # or using yarn: yarn global add nodemon
+```
+
+And nodemon will be installed globally to your system path.
+
+You can also install nodemon as a development dependency:
+
+```shell
+npm install --save-dev nodemon # or using yarn: yarn add nodemon -D
+```
+
+Usage
+
+nodemon wraps your application, so you can pass all the arguments you would normally pass to your app:
+
+```shell
+nodemon [your node app]
+```

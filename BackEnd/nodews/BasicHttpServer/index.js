@@ -29,5 +29,5 @@ server.listen(port,function(err){
         console.log(err);
     }
     
-    console.log("Server is Up and Running on Port 8000!!");
+    console.log("Server is Up and Running on Port ",port);
 });
