@@ -25,7 +25,7 @@ function requestHandler(req,res){
 
     //Code to integrate web pages: 
 
-    let filePath; 
+    let filePath;  //intialise a filePath. 
     switch(req.url){
         case '/':
             filePath = './index.html'
@@ -37,6 +37,7 @@ function requestHandler(req,res){
             filePath = './404.html'
     }
 
+    //reading the file data and sending it back to browser as a req. 
     fs.readFile(filePath,function(err,data){
         if(err){
             console.log('error');
