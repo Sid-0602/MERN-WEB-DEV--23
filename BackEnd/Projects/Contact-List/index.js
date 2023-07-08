@@ -10,18 +10,21 @@ app.set('view engine','ejs');
 //setting up the view path.
 app.set('views',path.join(__dirname,'views'));
 
+//parser
+app.use(express.urlencoded());
+
 var contactList = [
     {
-        name:"Siddhant J",
-        phone:"8010099787"
+        my_name:"Siddhant J",
+        my_phone:"8010099787"
     },
     {
-        name:"Siddharth S",
-        phone: "9333928772"
+        my_name:"Siddharth S",
+        my_phone: "9333928772"
     },
     {
-        name: "Vaishnavi D",
-        phone: "8669973534"
+        my_name: "Vaishnavi D",
+        my_phone: "8669973534"
     }
 ]
 
@@ -51,7 +54,15 @@ app.get('/practise',function(req,res){
 //Create a contact: 
 
 app.post("/create-contact", (req, res) => {
-    // return res.redirect('/practise');
+   /* contactList.push({
+        name: req.body.my_name,
+        phone: req.body.my_phone
+    }); */
+    console.log(req.body);
+    contactList.push(req.body);
+    
+
+    return res.redirect('/');
 });
 
 app.listen(port,function(err){
