@@ -4,10 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= title %>
+        <%= locals.title %>
     </title>
 </head>
 <body>
     <h1>This is rendered by EJS!!</h1>
+    <div>
+        <h1>Contact List</h1>
+
+        <div>
+            <ul>
+                <% for(let i of contact_list) {%>
+                    <li> 
+                        <p><%= i.name %></p>
+                        <p><%= i.phone %></p>
+                    </li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
