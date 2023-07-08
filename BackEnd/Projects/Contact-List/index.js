@@ -15,7 +15,7 @@ app.set('views',path.join(__dirname,'views'));
 app.get('/',function(req,res){
     //console.log(req); //this displays request data that is requested by browser.
 
-    return res.render('home');
+    return res.render('home',{title: "My-Contacts"});
 });
 
 app.listen(port,function(err){
