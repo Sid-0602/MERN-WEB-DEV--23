@@ -10,8 +10,20 @@ app.set('view engine','ejs');
 //setting up the view path.
 app.set('views',path.join(__dirname,'views'));
 
-//parser
+//parser and middleware
 app.use(express.urlencoded());
+
+//writing our own middleware: MiddleWare 1
+app.use(function(req,res,next){
+    console.log('middleware 1 called!!');
+    next();
+})
+
+//MiddleWare 2:
+app.use(function(req,res,next){
+    console.log('middleware 2 called!!');
+    next();
+})
 
 var contactList = [
     {
