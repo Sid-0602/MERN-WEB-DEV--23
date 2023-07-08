@@ -664,31 +664,6 @@ body div:link{text-decoration: none;}
 }
 
 
-#project-detail-4{
-    height: 0;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-    border: 3px solid black;
-    border-radius: 10px;
-    overflow-wrap: break-word;
-}
-
-#project-detail-4:target{
-    height: 50%;
-    width: 50%;
-    margin: 10px;
-    padding: 10px;
-    top: 25%;
-    left:25%;
-    background-color: lightgray;
-    border: 2px solid black;
-    overflow-wrap: break-word;
-}
-
 
 
 
