@@ -7,7 +7,7 @@ const app = express();
 
 //setting up template engine as EJS.
 app.set('view engine','ejs'); 
-//setting up the views. 
+//setting up the view path.
 app.set('views',path.join(__dirname,'views'));
 
 
