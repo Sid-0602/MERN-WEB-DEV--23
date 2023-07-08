@@ -22,6 +22,12 @@
                 <%}%>
             </ul>
         </div>
+
+        <form action='/create-contact' method="POST">
+            <input type="text" name="my_name" placeholder="enter name" required>
+            <input type="number" name="my_phone" placeholder="enter phone">
+            <button type="submit">Add to Contacts</button>
+        </form>
     </div>
 </body>
 </html>

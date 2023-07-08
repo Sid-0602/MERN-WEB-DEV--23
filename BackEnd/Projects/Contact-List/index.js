@@ -48,6 +48,12 @@ app.get('/practise',function(req,res){
     });
 });
 
+//Create a contact: 
+
+app.post("/create-contact", (req, res) => {
+    // return res.redirect('/practise');
+});
+
 app.listen(port,function(err){
     if(err){
         console.log("Error!!",err);
