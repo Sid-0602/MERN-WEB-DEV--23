@@ -3,31 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/80af900ef9.js" crossorigin="anonymous"></script>
     <title>
         <%= locals.title %>
     </title>
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <h1>This is rendered by EJS!!</h1>
     <div>
-        <h1>Contact List</h1>
+        <h1 id="heading"><i class="fa-solid fa-address-book fa-beat"></i> Contact List</h1>
 
-        <div>
+        <div id="list-items">
             <ul>
                 <% for(let i of contact_list) {%>
                     <li> 
-                        <p><%= i.my_name %></p>
-                        <p><%= i.my_phone %></p>
+                        <h3><i class="fa-solid fa-user"></i><span id="render-left"><%= i.my_name %></span>  
+                            <span id="render-center"><%= i.my_cc %></span>
+                            <span id="render-right"><%= i.my_phone %></span></h3> 
                     </li>
                 <%}%>
             </ul>
         </div>
 
-        <form action='/create-contact' method="POST">
-            <input type="text" name="my_name" placeholder="enter name" required>
-            <input type="number" name="my_phone" placeholder="enter phone">
-            <button type="submit">Add to Contacts</button>
-        </form>
+        <div id="add-contacts">
+            <div id="head"><h2 style="color:white;margin-top:10px"><i class="fa-solid fa-plus"></i> &nbsp; Add A New Contact!!</h2></div>
+            <form action='/create-contact' method="POST">
+                <div id="enter-name">
+                    <input type="text" name="my_name" placeholder="Enter name" required>
+                </div>
+                <div id="enter-code">
+                    <input type="text" name="my_cc" placeholder="Enter Country code" required>
+                </div>
+                <div id="enter-number">
+                    <input type="number" name="my_phone" placeholder="Enter phone">
+                </div>
+                
+                <button type="submit"class="button">Add to Contacts</button>
+            </form>
+
+        </div>
+
+        
     </div>
+
+    <script type="text/javascrit" src="/js/home.js"></script>
 </body>
 </html>

@@ -7,12 +7,13 @@ const app = express();
 
 //setting up template engine as EJS.
 app.set('view engine','ejs'); 
-//setting up the view path.
+//setting up the view path. This joins the controller and view.
 app.set('views',path.join(__dirname,'views'));
 
-//parser and middleware
+//parser 
 app.use(express.urlencoded());
 
+/* 
 //writing our own middleware: MiddleWare 1
 app.use(function(req,res,next){
     console.log('middleware 1 called!!');
@@ -25,18 +26,27 @@ app.use(function(req,res,next){
     next();
 })
 
+*/
+
+app.use(express.static('assets'));
+
 var contactList = [
     {
         my_name:"Siddhant J",
+        my_cc: "+91",
         my_phone:"8010099787"
     },
     {
         my_name:"Siddharth S",
+        my_cc: "+91",
         my_phone: "9333928772"
+        
     },
     {
         my_name: "Vaishnavi D",
+        my_cc: "+91",
         my_phone: "8669973534"
+       
     }
 ]
 
