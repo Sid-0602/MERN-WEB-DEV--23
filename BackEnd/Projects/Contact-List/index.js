@@ -54,26 +54,18 @@ var contactList = [
 
 //return a response for request: 
 
-//These are controllers: 
+//These is controllers: 
 app.get('/',function(req,res){
     //console.log(req); //this displays request data that is requested by browser.
 
     return res.render('home',{
         title: "Contacts-List",
         contact_list : contactList
-    
     });
 });
 
-app.get('/practise',function(req,res){
-    //console.log(req); //this displays request data that is requested by browser.
 
-    return res.render('practise',{
-        title: "Practice Page"
-    });
-});
-
-//Create a contact: 
+//Create a contact by taking form data: 
 
 app.post("/create-contact", (req, res) => {
    /* contactList.push({
@@ -83,7 +75,6 @@ app.post("/create-contact", (req, res) => {
     console.log(req.body);
     contactList.push(req.body);
     
-
     return res.redirect('/');
 });
 
