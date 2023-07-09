@@ -11,6 +11,7 @@ body{
     color: white;
 }
 
+
 #list-items{
     margin-left: 350px;
     margin-right:350px;
@@ -110,4 +111,8 @@ input:focus {
 .button:hover span:after {
     opacity: 1;
     right: 0;
-  }
+}
+
+.delete-button{
+    color:white;
+}
