@@ -3,6 +3,11 @@ const port='8000';
 const fs = require('fs');
 const path = require('path');
 
+
+//including the database library: 
+const db = require('./config/mongoose')
+
+
 const app = express(); 
 
 //setting up template engine as EJS.

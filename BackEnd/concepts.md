@@ -87,3 +87,31 @@ nodemon wraps your application, so you can pass all the arguments you would norm
 ```shell
 nodemon [your node app]
 ```
+
+### MongoDB and Mongoose
+
+To install and set-up MongoDB connection, install MongoDB at: [HERE](https://www.mongodb.com/)
+
+If you install MongoDB with version higher than 6.0 then follow this steps to install[ Mongo and start server](https://www.youtube.com/watch?v=59Yhxwdgi7I&lc=Ugz0Ke0jiT9SMY-w6214AaABAg).
+
+Mongoose Install 
+
+```
+npm install mongoose
+```
+
+Note: If you encounter this error: 
+
+![1689084036953](image/concepts/1689084036953.png)
+
+ Solution: Instead connecting database like:
+
+```
+mongoose.connect('mongodb://localhost/Contact_listDB');
+```
+
+Connect it in this manner: 
+
+```
+mongoose.connect('mongodb://127.0.0.1:27017/Contact_listDB');
+```
