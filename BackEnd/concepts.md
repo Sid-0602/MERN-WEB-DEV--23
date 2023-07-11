@@ -94,13 +94,13 @@ To install and set-up MongoDB connection, install MongoDB at: [HERE](https://www
 
 If you install MongoDB with version higher than 6.0 then follow this steps to install[ Mongo and start server](https://www.youtube.com/watch?v=59Yhxwdgi7I&lc=Ugz0Ke0jiT9SMY-w6214AaABAg).
 
-Mongoose Install 
+Mongoose Install
 
 ```
 npm install mongoose
 ```
 
-Note: If you encounter this error: 
+Note: If you encounter this error:
 
 ![1689084036953](image/concepts/1689084036953.png)
 
@@ -110,8 +110,10 @@ Note: If you encounter this error:
 mongoose.connect('mongodb://localhost/Contact_listDB');
 ```
 
-Connect it in this manner: 
+Connect it in this manner:
 
 ```
 mongoose.connect('mongodb://127.0.0.1:27017/Contact_listDB');
 ```
+
+Know more about mongoose: [OFFCIAL DOCUMENTATION](https://mongoosejs.com/docs/index.html)
