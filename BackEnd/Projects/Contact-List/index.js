@@ -6,6 +6,7 @@ const path = require('path');
 
 //including the database library: 
 const db = require('./config/mongoose')
+const Contact = require('./models/contact');
 
 
 const app = express(); 
@@ -35,24 +36,26 @@ app.use(function(req,res,next){
 
 */
 
+//Model part from MVC: Creating database schema. 
+
 app.use(express.static('assets'));
 
 var contactList = [
     {
-        my_name:"Siddhant J",
-        my_cc: "+91",
-        my_phone:"8010099787"
+       
+        name:"Siddhant J",
+        phone:"8010099787"
     },
     {
-        my_name:"Siddharth S",
-        my_cc: "+91",
-        my_phone: "9333928772"
+       
+        name:"Siddharth S",
+        phone: "9333928772"
         
     },
     {
-        my_name: "Vaishnavi D",
-        my_cc: "+91",
-        my_phone: "8669973534"
+       
+        name: "Vaishnavi D",
+        phone: "8669973534"
        
     }
 ]
@@ -77,7 +80,7 @@ app.get('/',function(req,res){
 app.post("/create-contact", (req, res) => {
    /* contactList.push({
         name: req.body.my_name,
-        phone: req.body.my_phone
+        phone: req.body.phone
     }); */
     console.log(req.body);
     contactList.push(req.body);
@@ -89,9 +92,9 @@ app.post("/create-contact", (req, res) => {
 app.get('/delete-contact/',function(req,res){
     //query and string params. 
     console.log(req.query);
-    let phone=req.params.phone;
-
+    let phone = req.query.phone;
     let contactIndex = contactList.findIndex(contact => contact.phone == phone);
+
     if(contactIndex!=-1){
         contactList.splice(contactIndex,1);
     }

@@ -18,18 +18,16 @@
                 <% for(let i of contact_list) {%>
                     <li class="contact">
                         <div class="details">
-                                <p><i class="fa-solid fa-user"></i><span id="render-left"><%= i.my_name %></span>  
-                                    <span id="render-center"><%= i.my_cc %></span>
-                                    <span id="render-right"><%= i.my_phone %></span>
-                                
-                                </p>        
+                                <p><i class="fa-solid fa-user"></i>
+                                    <span id="render-left"><%= i.name %></span>  
+                                    <span id="render-right"><%= i.phone %></span>
+                                    <span class="delete-button">
+                                        <a href="/delete-contact/?phone=<%= i.phone %>">
+                                            <i class="fa-sharp fa-solid fa-trash" style="color: #ffffff;"></i>
+                                    </a></span>
+                                </p>   
+
                         </div>
-                        <div>
-                            <span class="delete-button"><a href="/delete-contact/?phone=<%= i.my_phone%>">
-                                <i class="fa-sharp fa-solid fa-circle-xmark"></i>
-                            </a></span>
-                        </div> 
-                        
                         
                     </li>
                 <%}%>
@@ -40,16 +38,13 @@
             <div id="head"><h2 style="color:white;margin-top:10px"><i class="fa-solid fa-plus"></i> &nbsp; Add A New Contact!!</h2></div>
             <form action='/create-contact' method="POST">
                 <div id="enter-name">
-                    <input type="text" name="my_name" placeholder="Enter name" required>
+                    <input type="text" name="name" placeholder="Enter name" required>
                 </div>
                 <div id="enter-number">
-                    <input type="text" name="my_cc" placeholder="Enter Country code" required>
-                    <input type="number" name="my_phone" placeholder="Enter phone">
+                    <input type="number" name="phone" placeholder="Enter phone">
                 </div>
-                
                 <button type="submit"class="button">Add</button>
             </form>
-
         </div>
 
         
