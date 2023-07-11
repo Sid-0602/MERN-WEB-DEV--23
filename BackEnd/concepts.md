@@ -90,6 +90,8 @@ nodemon [your node app]
 
 ### MongoDB and Mongoose
 
+#### Installations and SetUp
+
 To install and set-up MongoDB connection, install MongoDB at: [HERE](https://www.mongodb.com/)
 
 If you install MongoDB with version higher than 6.0 then follow this steps to install[ Mongo and start server](https://www.youtube.com/watch?v=59Yhxwdgi7I&lc=Ugz0Ke0jiT9SMY-w6214AaABAg).
@@ -117,3 +119,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/Contact_listDB');
 ```
 
 Know more about mongoose: [OFFCIAL DOCUMENTATION](https://mongoosejs.com/docs/index.html)
+
+#### What is __v in mongoose?
+
+The `versionKey` is a property set on each document when first created by Mongoose. This keys value contains the internal [revision](http://aaronheckmann.blogspot.com/2012/06/mongoose-v3-part-1-versioning.html) of the document. The `versionKey` option is a string that represents the path to use for versioning. The default is `__v`.
