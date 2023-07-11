@@ -7,6 +7,7 @@ const path = require('path');
 //including the database library: 
 const db = require('./config/mongoose')
 const Contact = require('./models/contact');
+const { rejects } = require('assert');
 
 
 const app = express(); 
@@ -77,15 +78,22 @@ app.get('/',function(req,res){
 
 //Create a contact by taking form data: 
 
-app.post("/create-contact", (req, res) => {
-   /* contactList.push({
-        name: req.body.my_name,
+app.post('/create-contact', (req, res) => {
+    //This is a callback function. NodeJS stopped usage of callbacks. 
+
+    Contact.create({
+        name:req.body.name,
         phone: req.body.phone
-    }); */
-    console.log(req.body);
-    contactList.push(req.body);
-    
-    return res.redirect('/');
+    },function(err,newContact){
+        if(err){
+            console.log('Error in creating a contact!!');
+            return;
+        }
+
+        console.log('*************',newContact);
+        return res.redirect('back');
+
+    });
 });
 
 //for deleting a contact, get query from url. 
@@ -100,11 +108,11 @@ app.get('/delete-contact/',function(req,res){
     }
 
     return res.redirect('back');
-})
+});
 
 app.listen(port,function(err){
     if(err){
         console.log("Error!!",err);
     }
     console.log("Express Server is running on Port: ",port);
-})
+});
