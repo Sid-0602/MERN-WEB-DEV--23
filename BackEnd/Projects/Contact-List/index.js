@@ -14,13 +14,15 @@ app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded());
 
 /* 
-//writing our own middleware: MiddleWare 1
+writing our own middleware: MiddleWare 1
+
 app.use(function(req,res,next){
     console.log('middleware 1 called!!');
     next();
 })
 
-//MiddleWare 2:
+MiddleWare 2:
+
 app.use(function(req,res,next){
     console.log('middleware 2 called!!');
     next();

@@ -1,9 +1,22 @@
 # MongoDB - Express JS - React - NodeJS (MERN) Web Development
 
+### CONTENTS
 
-This repo contains:
 1. Web development Practise codes for front end.
 2. JavaScript Core Concepts with code examples.
 3. jQuery, Ajax, Git are explained with code and example.
 4. BackEnd Concepts with code and examples.
 5. Projects I made in the meantime.
+
+### Tech Stack and Tools
+
+1. #### Frontend Development:
+
+   1. Languages: HTML5, CSS3, JavaScript ES6+.
+   2. Framework: React.
+2. #### Backend Development:
+
+   1. Languages: JavaScript (Nodejs runtime environment).
+   2. Framework: ExpressJS
+3. #### Database: MongoDB and Mongoose.
+4. #### Tools: Git/Github, Robo 3t.
