@@ -67,12 +67,24 @@ var contactList = [
 
 //These is controllers: 
 app.get('/',function(req,res){
-    //console.log(req); //this displays request data that is requested by browser.
+    console.log(req); //this displays request data that is requested by browser.
 
-    return res.render('home',{
-        title: "Contacts-List",
-        contact_list : contactList
-    });
+    //fetch values from Database: 
+    Contact.find({},function(err,contacts){
+        if(err){
+            console.log('Error in fetching contacts in DB');
+            return;
+        }
+
+        return res.render('home',{
+            title: "Contacts-List",
+            contact_list : contactList
+        });
+
+    })
+
+
+    
 });
 
 
