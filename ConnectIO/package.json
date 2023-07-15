@@ -1,0 +1,17 @@
+{
+  "name": "connectio",
+  "version": "1.0.0",
+  "description": "My all social meadia web Application",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Siddhant Jadhav",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^6.0.1"
+  }
+}
