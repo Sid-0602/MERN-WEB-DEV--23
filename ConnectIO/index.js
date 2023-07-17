@@ -6,6 +6,8 @@ const port = 8000; //when deployed on live server, it is deployed on port 80.
 //use express router: 
 
 app.use('/',require('./routes'));
+app.set('view engine','ejs');
+app.set('views','./views')
 
 app.get("/", (req, res) => {
     res.send("Hello World!");
