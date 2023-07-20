@@ -48,11 +48,8 @@ module.exports.create = function(req,res){
             return res.redirect('back');
         }
     });
-    
 }
-
 //get the sign in data and create a session for user. 
-module.exports.createSession = function(req,res){
+module.exports.createSession = function(req,res){}
     
     
-}
