@@ -1,5 +1,24 @@
-<link rel="stylesheets" href="css/user_profile.css">
+<style>
+    body{
+        margin: 0;
+        text-align: center;
+        background-color:#222;
+    }
+    h1,h2,h3{
+        text-align: center;
+        color: white;
+    }
+    p{
+        color: white;
+    }
+</style>
+<h1>
+    <%= title%>
+</h1>
+<h2>
+    Hello!! <%= user.name %>
+</h2>
 
-    <h1>
-        ConnectIO + <%= title %>
-    </h1>
+<h3>User's Info</h3>
+<p> Name: <%= user.name%></p>
+<p> Email: <%= user.email%></p>
