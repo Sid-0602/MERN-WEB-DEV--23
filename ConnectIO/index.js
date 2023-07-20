@@ -1,10 +1,18 @@
 const express = require('express');
 const app = express();
 const port = 8000; //when deployed on live server, it is deployed on port 80.
-const expressLayouts = require('express-ejs-layouts');
+const expressLayout = require('express-ejs-layouts');
+
+app.use(express.static('/ConnectIO/assets'));
 
 
-app.use(expressLayouts); //using layouts. 
+app.use(expressLayout); //using layouts. 
+//extract styles and scripts from the layout. 
+app.set('layout exrtactStyles',true);
+app.set('layout exrtactScripts',true);
+
+
+
 //use express router: 
 
 app.use('/',require('./routes'));
