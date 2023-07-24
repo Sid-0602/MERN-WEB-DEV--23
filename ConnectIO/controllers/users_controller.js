@@ -13,9 +13,9 @@ module.exports.profile = function(req,res){
             }
 
             return res.redirect('/users/sign-in');
-        })
+        });
     }else{
-        return res.redirect('/users/sign-in');
+        return res.redirect('/users/sign-in'); 
     }
 
 }
@@ -38,6 +38,8 @@ module.exports.signIn= function(req,res){
 
 //get the signup data: 
 module.exports.create = function(req,res){
+
+    //if the password and confirm password does not match.
     if(req.body.password != req.body.confirm_password){
         
         return res.redirect('back');
@@ -63,7 +65,32 @@ module.exports.create = function(req,res){
         }
     });
 }
-//get the sign in data and create a session for user. 
-module.exports.createSession = function(req,res){}
-    
-    
+//get the sign-in data and create a session for user. 
+
+module.exports.createSession = function(req,res){
+
+    //find user
+    User.findOne({ email: req.body.email}, function(err,user){
+        if(err){
+            console.log("Some error occurred! Specific: ",err);
+        }
+        
+        if(user){
+            //handle the user found
+            //if the password does not match
+            if(user.password!=req.body.password){
+                return  res.redirect('back');
+            }
+            //create session for user: 
+
+            //to create a session, set the cookie with user_id.
+            res.cookie('user_id',user.id);
+            return res.redirect('/users/profile');
+
+        }else{
+            //handle if user not found
+            return res.redirect('back');
+        }
+    }); 
+
+}
