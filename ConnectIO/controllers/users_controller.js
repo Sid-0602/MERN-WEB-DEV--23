@@ -4,6 +4,7 @@ module.exports.profile = function(req,res){
 
     //check if user id is present in cookies:
     if(req.cookies.user_id){
+        console.log("Session cookie created!!");
         User.findById(req.cookies.user_id, function(err,user){
             if(user){
                     return res.render('user_profile',{
