@@ -72,36 +72,8 @@ module.exports.create = function(req,res){
 
 module.exports.createSession = function(req,res){
 
-    //find user
-    User.findOne({ email: req.body.email}, function(err,user){
-        if(err){
-            console.log("Some error occurred! Specific: ",err);
-        }
-        
-        if(user){
-            //handle the user found
-            //if the password does not match
-            if(user.password!=req.body.password){
-                return  res.redirect('back');
-            }
-            //create session for user: 
-
-            //to create a session, set the cookie with user_id.
-            res.cookie('user_id',user.id);
-            return res.redirect('/users/profile');
-
-        }else{
-            //handle if user not found
-            return res.redirect('back');
-        }
-    }); 
+    //redirect to home page as session is created in passport Js itself.
+    return res.redirect('/users/profile');
 
 }
 
-
-module.exports.signOut = function(req,res){
-    //delete the cookie and send the response status as 200: 
-    res.clearCookie('user_id');  //this clears the cookie. 
-    console.log("Logged out successfully!");
-    res.redirect('/users/sign-in'); 
-}
