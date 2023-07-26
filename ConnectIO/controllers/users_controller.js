@@ -99,19 +99,8 @@ module.exports.createSession = function(req,res){
 
 
 module.exports.signOut = function(req,res){
-    
-    const sessionCookie = req.cookies.session;
-
-    if(sessionCookie){
-
-        //delete the cookie and send the response status as 200: 
-        res.clearCookie('session');  //this clears the session cookie. 
-        console.log("Logged out successully!");
-        res.redirect('/users/sign-in'); 
-    }
-    else{
-        return res.redirect('/users/sign-in');
-    }
-    
-    
+    //delete the cookie and send the response status as 200: 
+    res.clearCookie('user_id');  //this clears the cookie. 
+    console.log("Logged out successfully!");
+    res.redirect('/users/sign-in'); 
 }
