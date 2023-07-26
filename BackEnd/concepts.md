@@ -124,6 +124,39 @@ Know more about mongoose: [OFFCIAL DOCUMENTATION](https://mongoosejs.com/docs/in
 
 The `versionKey` is a property set on each document when first created by Mongoose. This keys value contains the internal [revision](http://aaronheckmann.blogspot.com/2012/06/mongoose-v3-part-1-versioning.html) of the document. The `versionKey` option is a string that represents the path to use for versioning. The default is `__v`.
 
-## Some Backend Code Concepts in Express: 
+## Some Backend Code Concepts in Express:
 
-How to use the req Object in Express: [Here](https://www.digitalocean.com/community/tutorials/nodejs-req-object-in-expressjs)
+#### How to use the req Object in Express: [Here](https://www.digitalocean.com/community/tutorials/nodejs-req-object-in-expressjs)
+
+#### Serialize and deserialize in passport js
+
+
+To maintain a login session, Passport serializes and deserializes user information to and from the session. The information that is stored is determined by the application, which supplies a `serializeUser` and a `deserializeUser` function.
+
+```
+passport.serializeUser(function(user, cb) {
+  process.nextTick(function() {
+    return cb(null, {
+      id: user.id,
+      username: user.username,
+      picture: user.picture
+    });
+  });
+});
+
+passport.deserializeUser(function(user, cb) {
+  process.nextTick(function() {
+    return cb(null, user);
+  });
+});
+```
+
+A login session is established upon a user successfully authenticating using a credential. The following route will authenticate a user using a username and password. If successfully verified, Passport will call the `serializeUser` function, which in the above example is storing the user's ID, username, and picture. Any other properties of the user, such as an address or birthday, are not stored.
+
+```
+app.post('/login/password',
+  passport.authenticate('local', { failureRedirect: '/login', failureMessage: true }),
+  function(req, res) {
+    res.redirect('/~' + req.user.username);
+  });
+```
