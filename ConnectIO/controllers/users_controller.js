@@ -1,22 +1,25 @@
-const User = require('../models/user.js');
+const User = require('../models/user.js')
 
 module.exports.profile = function(req,res){
 
     //check if user id is present in cookies:
     if(req.cookies.user_id){
+        console.log("Session cookie created!!");
         User.findById(req.cookies.user_id, function(err,user){
             if(user){
-                return res.render('user_profile',{
+                    return res.render('user_profile',{
                     title: "User Profile",
                     user: user
                 })
+            }else{
+                return res.redirect('/users/sign-in');
             }
-
-            return res.redirect('/users/sign-in');
-        })
+        });
     }else{
-        return res.redirect('/users/sign-in');
+        return res.redirect('/users/sign-in'); 
     }
+
+    
 
 }
 
@@ -38,64 +41,67 @@ module.exports.signIn= function(req,res){
 
 //get the signup data: 
 module.exports.create = function(req,res){
-    module.exports.create = function(req,res){
-        if(req.body.password != req.body.confirm_password){
-            
+
+    //if the password and confirm password does not match.
+    if(req.body.password != req.body.confirm_password){
+        
+        return res.redirect('back');
+    }
+    
+    //check for user with the email in the database: 
+    User.findOne({email: req.body.email},function(err,user){
+        //if user is not found, then show the error. 
+        if(err){
+            console.log("Error in finding user!!");
+        }
+
+        if(!user){
+            User.create(req.body, function(err,user){
+                if(err){
+                    console.log("Error in creating user while signing up!!");
+                    return;
+                }
+                return res.redirect('/users/sign-in');
+            })
+        }else{
             return res.redirect('back');
         }
-        
-        //check for user with the email in the database: 
-        User.findOne({email: req.body.email},function(err,user){
-            //if user is not found, then show the error. 
-            if(err){
-                console.log("Error in finding user!!");
-            }
-    
-            if(!user){
-                User.create(req.body, function(err,user){
-                    if(err){
-                        console.log("Error in creating user while signing up!!");
-                        return;
-                    }
-                    return res.redirect('/users/sign-in');
-                })
-            }else{
-                return res.redirect('back');
-            }
-        });
-        
-    }
+    });
 }
+//get the sign-in data and create a session for user. 
 
-//get the sign in data and create a session for user. 
-
-//This is local auth method in manual-local-auth: 
 module.exports.createSession = function(req,res){
-    //steps for auth: 
-    //find the user: 
-    User.findOne({email: req.body.email},function(err,user){
+
+    //find user
+    User.findOne({ email: req.body.email}, function(err,user){
         if(err){
-            console.log("Error in finding user in signing in!");
+            console.log("Some error occurred! Specific: ",err);
         }
-        //handle user found: 
+        
         if(user){
-
-            //handle password which don't match: 
+            //handle the user found
+            //if the password does not match
             if(user.password!=req.body.password){
-                return res.redirect('back');
+                return  res.redirect('back');
             }
+            //create session for user: 
 
-            // handle session creation: 
+            //to create a session, set the cookie with user_id.
             res.cookie('user_id',user.id);
             return res.redirect('/users/profile');
-            
-        }
-        else{
-            //handle user not found : 
+
+        }else{
+            //handle if user not found
             return res.redirect('back');
         }
-    })
+    }); 
 
-    
+}
 
+
+module.exports.signOut = function(req,res){
+    //delete the cookie and send the response status as 200: 
+    res.clearCookie('user_id');  //this clears the cookie. 
+    console.log("Logged out successfully!");
+    res.redirect('/users/sign-in'); 
 }
