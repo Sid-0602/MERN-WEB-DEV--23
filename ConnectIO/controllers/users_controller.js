@@ -24,7 +24,7 @@ module.exports.signUp= function(req,res){
 module.exports.signIn= function(req,res){
 
     if(req.isAuthenticated()){
-       return res.redirect('/users/profile');
+        return res.redirect('/users/profile');
     }
     return res.render('../views/user_sign_in.ejs',{
         title: "ConnectIO | Sign In"
@@ -69,3 +69,10 @@ module.exports.createSession = function(req,res){
 
 }
 
+module.exports.terminateSession = function(req,res){
+    //req.logout requires to be a callback function .
+    req.logout(function(err) {
+        if (err) { return next(err); }
+        res.redirect('/');
+    });
+}
