@@ -1,28 +1,12 @@
 const User = require('../models/user.js')
 
 module.exports.profile = function(req,res){
-
-    //check if user id is present in cookies:
-    if(req.cookies.user_id){
-        console.log("Session cookie created!!");
-        User.findById(req.cookies.user_id, function(err,user){
-            if(user){
-                    return res.render('user_profile',{
-                    title: "User Profile",
-                    user: user
-                })
-            }else{
-                return res.redirect('/users/sign-in');
-            }
-        });
-    }else{
-        return res.redirect('/users/sign-in'); 
-    }
-
-    
+    //no need to check for session cookie, as ,it will be authenticated by passport JS.
+    return res.render('user_profile',{
+        title: 'User Profile'
+    });
 
 }
-
 
 //render the sign up page. 
 module.exports.signUp= function(req,res){

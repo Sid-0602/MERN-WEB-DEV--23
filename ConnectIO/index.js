@@ -30,7 +30,7 @@ app.set('view engine','ejs');
 app.set('views','./views'); //add the views path. 
 
 app.use(session({
-    name: 'ConnectIO',
+    name: 'user_id',
     secret: 'something',
     saveUninitialized: false,
     resave: false,
@@ -40,7 +40,9 @@ app.use(session({
 }));
 
 app.use(passport.initialize());
-app.use(passport.session())
+app.use(passport.session());
+
+app.use(passport.setAuthenticatedUser);
 
 //use express router: 
 
