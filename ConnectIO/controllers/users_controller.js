@@ -10,6 +10,10 @@ module.exports.profile = function(req,res){
 
 //render the sign up page. 
 module.exports.signUp= function(req,res){
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
+    
     return res.render('../views/user_sign_up.ejs',{
         title: "ConnectIO | Sign Up"
     })
@@ -18,6 +22,10 @@ module.exports.signUp= function(req,res){
 
 //render signIn page. 
 module.exports.signIn= function(req,res){
+
+    if(req.isAuthenticated()){
+       return res.redirect('/users/profile');
+    }
     return res.render('../views/user_sign_in.ejs',{
         title: "ConnectIO | Sign In"
     })
