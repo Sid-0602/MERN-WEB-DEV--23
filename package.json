@@ -4,6 +4,10 @@
     "express-session": "^1.17.3",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-    "prompt-sync": "^4.2.0"
+    "prompt-sync": "^4.2.0",
+    "sass-middleware": "^0.0.3"
+  },
+  "devDependencies": {
+    "node-sass": "^9.0.0"
   }
 }

@@ -11,6 +11,18 @@ const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy.js');
 const MongoStore  = require('connect-mongo')(session);
 
+//sass middleware (this is DART MIDDLEWARE)
+const sassMiddleware = require('sass-middleware');
+const path = require('path');
+app.use(sassMiddleware({
+    src: path.join('./assets/scss','assets','scss'),
+    dest: path.join('./assets/scss','assets','scss'),
+    debug: false,
+    outputStyle: 'expanded',
+    prefix: './css',
+}));
+
+
 
 app.use(express.urlencoded());
 app.use(cookieParser());
