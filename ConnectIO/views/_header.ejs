@@ -1,12 +1,27 @@
-<header 
-style=
-"background-color: grey;
 
-
-
-            
-">
-    <ul>
+<!DOCTYPE html>
+<html lang="en">
+<header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0;
+            text-align: center;
+            background-color:#222;
+        }
+        h1,h2,h3,h4{
+            text-align: center;
+            color: white;
+        }
+        p,a{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul style="list-style: none;">
         <% if (locals.user){ %>
             <li> <%= user.name %></li>
             <li>  <a href="/users/sign-out">Sign Out</a> </li>
@@ -21,4 +36,5 @@ style=
             </li>
         <% } %>
     </ul>
+</body>
 </header>
