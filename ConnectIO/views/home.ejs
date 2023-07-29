@@ -19,10 +19,10 @@
 <body>
     <h1>Welcome!! This is ConnectIO!</h1>
 
-    <% if (locals.user){ %>
+    <% if (locals.user) { %>
         
         <section id="feed-posts">
-            <h3> Posts Here</h3>
+            <h3> Your Feed!!</h3>
             <form action="/posts/create" id="new-post-form" method="POST">
                 <textarea name="content" id="" cols="30" rows="5" placeholder="type here.."></textarea>
                 <input type="submit" value="Post">
