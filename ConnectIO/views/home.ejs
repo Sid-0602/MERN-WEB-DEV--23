@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body{
-            margin: 0;
-            text-align: center;
+            margin: 20px;
             background-color:#222;
         }
         h1,h2,h3,h4{
-            text-align: center;
             color: white;
         }
         p{
@@ -24,12 +22,30 @@
     <% if (locals.user){ %>
         
         <section id="feed-posts">
-        <h3> Posts Here</h3>
-        <form action="/posts/create" id="new-post-form" method="POST">
-            <textarea name="content" id="" cols="30" rows="5" placeholder="type here.."></textarea>
-            <input type="submit" value="Post">
-        </form>
-    </section>
+            <h3> Posts Here</h3>
+            <form action="/posts/create" id="new-post-form" method="POST">
+                <textarea name="content" id="" cols="30" rows="5" placeholder="type here.."></textarea>
+                <input type="submit" value="Post">
+            </form>
+        </section>
+
+        <!-- POST CONTAINERS -->
+
+        <div id="post-list-container">
+            <ul>
+                <% for(post of posts) { %> 
+                <li>
+                    <%= post.content %>
+                    <small>
+                        <p> Posted by: </p>
+                        <%= post.user.name %>
+                    </small>
+                </li>
+                <% } %>
+
+            </ul>
+
+        </div>
 
     <% } else { %>
         <h3> Login/Sign-up to your account to Post!!</h3>
