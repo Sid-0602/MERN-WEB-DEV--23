@@ -17,7 +17,15 @@ module.exports.home = function(req,res){
     }); */
 
     // We are using this query to populate the "user". exec() is callback function. Read more on documentation.
-    Post.find({title: 'Posts'}).populate('user').exec(function(err,posts){
+    Post.find({})
+    .populate('user')
+    .populate({
+        path: 'comments',
+        populate: {
+            path: 'user'
+        }
+    })
+    .exec(function(err,posts){
         return res.render('../views/home.ejs',{
             title: "ConnectIO | Home",
             posts: posts

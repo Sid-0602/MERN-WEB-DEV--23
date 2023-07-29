@@ -22,7 +22,12 @@ module.exports.create = function(req,res){
                 user: req.user._id,
                 post: req.body.post
             }, function(err,comment){
-
+                if (err) {
+                    console.error('Error creating the comment:', err);
+                    return res.redirect('/');
+                }
+    
+                console.log('Comment posted successfully!');
                 post.comments.push(comment);
                 post.save();
 
