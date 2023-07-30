@@ -6,6 +6,9 @@ const passport = require('passport');
 //adding extra security using passport.checkAuthentication() 
 router.post('/create',passport.checkAuthentication,postsController.create);
 
+//route for deleting post.
+router.get('/destroy/:id',passport.checkAuthentication,postsController.destroy);
+
 
 
 module.exports = router;
