@@ -30,8 +30,7 @@ module.exports.home = function(req,res){
 
         User.find({},function(err,users){
 
-
-            return res.render('../views/home.ejs',{
+            return res.render('home',{
                 title: "ConnectIO | Home",
                 posts: posts,
                 all_users: users

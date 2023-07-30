@@ -70,7 +70,7 @@ module.exports.create = function(req,res){
 module.exports.createSession = function(req,res){
 
     //redirect to home page as session is created in passport Js itself.
-    return res.redirect('/users/profile');
+    return res.redirect('/');
 
 }
 
