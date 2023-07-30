@@ -1,5 +1,6 @@
 
 const Post = require('../models/post');
+const User  = require('../models/user');
 //the syntax to create controller: 
 //setting up a cookie: 
 // module.exports.actionName = function(req,res).
@@ -26,10 +27,18 @@ module.exports.home = function(req,res){
         }
     })
     .exec(function(err,posts){
-        return res.render('../views/home.ejs',{
-            title: "ConnectIO | Home",
-            posts: posts
+
+        User.find({},function(err,users){
+
+
+            return res.render('../views/home.ejs',{
+                title: "ConnectIO | Home",
+                posts: posts,
+                all_users: users
+            });
         });
+
+        
     })
     
 }

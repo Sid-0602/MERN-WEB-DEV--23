@@ -14,6 +14,7 @@
         p{
             color: white;
         }
+        
     </style>
 </head>
 <body>
@@ -30,7 +31,7 @@
         </section>
 
         <!-- POST CONTAINERS -->
-
+        <section>
         <div id="post-list-container">
             <ul>
                 <% for(post of posts) { %> 
@@ -44,7 +45,17 @@
     <% } else { %>
         <h3> Login/Sign-up to your account to Post!!</h3>
     <% } %>
-    
+    </section>
+
+    <section id="user-friends"> 
+        <h2>Friends Lists</h2>
+        <% for(u of all_users) { %>
+            <p>
+                <a href="/users/profile/<%= u.id%>"> <%= u.name%></a>
+            </p>
+        <% } %>
+
+    </section>
     
 </body>
 </html>

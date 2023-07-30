@@ -1,10 +1,15 @@
 const User = require('../models/user.js')
 
 module.exports.profile = function(req,res){
-    //no need to check for session cookie, as ,it will be authenticated by passport JS.
-    return res.render('user_profile',{
-        title: 'User Profile'
+
+    User.findById(req.params.id, function(err,user){
+        //no need to check for session cookie, as ,it will be authenticated by passport JS.
+            return res.render('user_profile',{
+            title: 'User Profile',
+            profile_user: user
+        });
     });
+    
 
 }
 
