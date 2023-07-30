@@ -1,50 +1,34 @@
 const Comment = require('../models/comment');
 const Post = require('../models/post');
 
-module.exports.create = function(req,res){
+module.exports.create = async function(req,res){
     //find if the post exists in database: 
 
-    Post.findById(req.body.post,function(err,post){
-
-        if(err){
-            console.log("Error finding the post!!",err);
-            return res.redirect('/');
-        }
-
-        if(!post){
-            console.log("Post does not exist!");
-            return res.redirect('/');
-        }
+    try {
+        let post = await Post.findById(req.body.post);
 
         if(post){
-            Comment.create({
+            let comment = await Comment.create({
                 content: req.body.content,
                 user: req.user._id,
                 post: req.body.post
-            }, function(err,comment){
-                if (err) {
-                    console.error('Error creating the comment:', err);
-                    return res.redirect('/');
-                }
-    
-                console.log('Comment posted successfully!');
-                post.comments.push(comment);
-                post.save();
-
-                res.redirect('/');
-            })
+            });
+            console.log('Comment posted successfully!');
+            post.comments.push(comment);
+            post.save();   
+            return  res.redirect('back');
         }
-    });
+    } catch (err) {
+        console.log("Error",err);
+        return  res.redirect('/');
+    }
+    
 }
 
-module.exports.destroy = function(req,res){
-    Comment.findById(req.params.id,function(err,comment){
-        console.log(comment.user.id);
-        console.log(req.user.id);
-        if(err){
-            console.error('Error finding comment:', err);
-            return res.redirect('back');
-        }
+module.exports.destroy = async function(req,res){
+
+    try {
+        let comment = await Comment.findById(req.params.id);
         //if comment does not exist: 
         if (!comment) {
             console.log('Comment not found');
@@ -76,5 +60,8 @@ module.exports.destroy = function(req,res){
             console.log('Comment cannot be deleted: Unauthorized');
             return res.redirect('back');
         }
-    }); 
+    } catch (err) {
+        console.log("Error",err);
+        return res.redirect('/');
+    }
 }

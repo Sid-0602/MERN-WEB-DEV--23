@@ -5,9 +5,7 @@ const User  = require('../models/user');
 //setting up a cookie: 
 // module.exports.actionName = function(req,res).
 
-module.exports.home = function(req,res){
-    console.log(req.cookies); //this gives us cookie. 
-
+module.exports.home = async function(req,res){
     // res.cookie('user_id',25); //changing value of cookie from server side.
     /*
     Post.find({},function(err,posts){
@@ -17,31 +15,31 @@ module.exports.home = function(req,res){
         });
     }); */
 
-    // We are using this query to populate the "user". exec() is callback function. Read more on documentation.
-    Post.find({})
-    .populate('user')
-    .populate({
-        path: 'comments',
-        populate: {
-            path: 'user'
-        }
-    })
-    .exec(function(err,posts){
-
-        User.find({},function(err,users){
-
-            return res.render('home',{
-                title: "ConnectIO | Home",
-                posts: posts,
-                all_users: users
-            });
+    try{
+        let posts = await Post.find({})
+        .populate('user')
+        .populate({
+            path: 'comments',
+            populate: {
+                path: 'user'
+            }
         });
 
-        
-    })
+        let users = await User.find({}); 
+
+        return res.render('home',{
+            title: "ConnectIO | Home",
+            posts: posts,
+            all_users: users
+        });
+    }catch(err){
+        console.log('Error',err);
+        return;
+    }
     
 }
 
+//async-await: 
 
 
 
