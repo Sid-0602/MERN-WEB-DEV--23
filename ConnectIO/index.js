@@ -14,6 +14,8 @@ const MongoStore  = require('connect-mongo')(session);
 //sass middleware (this is DART MIDDLEWARE)
 const sassMiddleware = require('sass-middleware');
 const path = require('path');
+const flash = require('connect-flash');
+const customMare = require('./config/middleware');
 app.use(sassMiddleware({
     src: path.join('./assets/scss','assets','scss'),
     dest: path.join('./assets/scss','assets','scss'),
@@ -65,7 +67,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(passport.setAuthenticatedUser);
-
+app.use(flash()); //set this flash messages just after a session is set. 
+app.use(customMare.setFlash);
 //use express router: 
 
 app.use('/',require('./routes'));

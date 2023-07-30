@@ -6,11 +6,21 @@
         <%= title %>
     </title>
     <%- style%>
+    <style>
+        h4{
+            color: white;
+        }
+    </style>
 
 </head>
 <body>
 
     <%-  include('_header'); %>
+    <% if(flash.success && flash.success.length > 0) { %>
+        <h4>
+            <%= flash.success %>
+        </h4>
+    <% } %>
     
     
     <%- body %>

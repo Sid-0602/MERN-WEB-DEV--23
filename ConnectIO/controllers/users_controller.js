@@ -78,6 +78,7 @@ module.exports.create = function(req,res){
 module.exports.createSession = function(req,res){
 
     //redirect to home page as session is created in passport Js itself.
+    req.flash('success','Logged in successfully!!');
     return res.redirect('/');
 
 }
@@ -86,6 +87,8 @@ module.exports.terminateSession = function(req,res){
     //req.logout requires to be a callback function .
     req.logout(function(err) {
         if (err) { return next(err); }
+        req.flash('success',"You have been logged out!")
         res.redirect('/');
     });
+
 }
