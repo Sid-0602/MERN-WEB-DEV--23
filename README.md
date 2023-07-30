@@ -18,5 +18,6 @@
 
    1. Languages: JavaScript (Nodejs runtime environment).
    2. Framework: ExpressJS
+   3. Middlewares: Passport JS, scss, sass. 
 3. #### Database: MongoDB and Mongoose.
 4. #### Tools: Git/Github, MongoDB Compass
