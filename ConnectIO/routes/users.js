@@ -7,6 +7,7 @@ const passport = require('passport');
 //router.get('/profile',passport.checkAuthentication,usersController.profile);
 
 router.get('/profile/:id',passport.checkAuthentication,usersController.profile);
+router.post('/update/:id',passport.checkAuthentication,usersController.update);
 
 //these routers is used for user sign-in, sign-up:
 router.get('/sign-up',usersController.signUp);
