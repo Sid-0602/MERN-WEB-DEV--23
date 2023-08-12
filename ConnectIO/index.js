@@ -29,7 +29,9 @@ app.use(sassMiddleware({
 app.use(express.urlencoded());
 app.use(cookieParser());
 
-app.use(express.static('./assets'));
+
+//connect static files for css/js
+app.use(express.static(__dirname + '/assets'));
 
 app.use(expressLayouts); //using layouts. 
 //extract styles and scripts from the layout. 
