@@ -18,9 +18,11 @@
 
 <% if(user.id == profile_user.id) { %>
     <!--If user matches with logged in , then show the form! -->
-    <form action="/users/update/<%= profile_user.id %>" method="POST">
-        <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required>
+    <form action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
+        <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>" required><br><br>
         <input type="email" name="email" placeholder="Your Email" value="<%= profile_user.email %>" required>
+        <br><br>
+        <input type="file" name="avatar" placeholder="Profile Picture"><br><br>
         <input type="submit" value="Update">
     </form>
 
