@@ -10,15 +10,6 @@ module.exports.create = async function(req,res){
             user: req.user._id
         });
         
-
-        if(req.xhr){
-            return  res.status(200).json({
-                data: {
-                    post: post
-                },
-                message: "Post created!!"
-            });
-        };
         console.log("Posted Successfully!!");
         return res.redirect('back');
     }catch(err){
