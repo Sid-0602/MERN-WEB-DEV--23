@@ -16,6 +16,7 @@ const sassMiddleware = require('sass-middleware');
 const path = require('path');
 const flash = require('connect-flash');
 const customMare = require('./config/middleware');
+const multer = require('multer');
 app.use(sassMiddleware({
     src: path.join('./assets/scss','assets','scss'),
     dest: path.join('./assets/scss','assets','scss'),
