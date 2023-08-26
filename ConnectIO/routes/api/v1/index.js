@@ -3,6 +3,7 @@
 const express = require('express');
 const router = express.Router();
 
-
+//this will redirect to Post API route. 
+router.use('/posts',require('./posts'));
 
 module.exports = router;

@@ -12,7 +12,7 @@ router.use('/users',require('./users'));
 router.use('/posts',require('./posts'));
 router.use('/comments',require('./comments'));
 
-router.use('/api',require('./api')); //this 
+router.use('/api',require('./api')); //this is entry point for all api routes.
 
 
 module.exports = router;
