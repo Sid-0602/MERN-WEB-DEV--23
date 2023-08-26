@@ -34,6 +34,9 @@ app.use(cookieParser());
 //connect static files for css/js
 app.use(express.static(__dirname + '/assets'));
 
+//making the upload path available for user.
+app.use('/uploads',express.static(__dirname + '/uploads'));
+
 app.use(expressLayouts); //using layouts. 
 //extract styles and scripts from the layout. 
 app.set('layout extractStyles',true);

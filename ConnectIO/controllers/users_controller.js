@@ -1,4 +1,6 @@
 const User = require('../models/user.js')
+const fs = require('fs');
+const path = require('path');
 
 module.exports.profile = function(req,res){
 
@@ -17,7 +19,7 @@ module.exports.update = async function(req,res){
     //         return res.redirect('back');
     //     });
     // }else{
-    //     return res.status(401).send('Unauthorised!');
+    //     return res.status(401).send('Unauthorized!');
     // }
 
     if(req.user.id == req.params.id){
@@ -32,7 +34,12 @@ module.exports.update = async function(req,res){
                 user.email = req.body.email;
 
                 if(req.file){
+
+                    if(user.avatar){
+                        fs.unlinkSync(path.join(__dirname, '..', user.avatar));
+                    }
                     //this saves path of uploaded file into the avatar field in the user.
+
                     user.avatar = User.avatarPath + '/' + req.file.filename;
                 }
 

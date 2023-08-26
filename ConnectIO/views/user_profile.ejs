@@ -16,6 +16,9 @@
     <%= title%>
 </h1>
 
+<img src="<%= user.avatar%>" alt="<%= user.name%>" width="100px">
+<br><br>
+
 <% if(user.id == profile_user.id) { %>
     <!--If user matches with logged in , then show the form! -->
     <form action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="POST">
