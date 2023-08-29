@@ -1,16 +1,16 @@
 const passport = require('passport');
 const User = require('../models/user');
 
-var JwtStrategy = require('passport-jwt').Strategy,
-    ExtractJwt = require('passport-jwt').ExtractJwt;
+const JWTStrategy = require('passport-jwt').Strategy;
+const ExtractJwt = require('passport-jwt').ExtractJwt;
     
 let opts = {}
 opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
-opts.secretOrKey = 'Encrypt/Decrypt Key';
-passport.use(new JwtStrategy(opts, function(jwt_payload, done) {
-    User.findById({id: jwt_payload._id}, function(err, user) {
+opts.secretOrKey = 'EncryptionKey';
+passport.use(new JWTStrategy(opts, function(jwtPayLoad, done) {
+    User.findById(jwtPayLoad._id, function(err, user) {
         if (err) {
-            console.log(err);
+            console.log("Error in finding user from JWT",err);
             return done(err, false);
         }
         if (user) {

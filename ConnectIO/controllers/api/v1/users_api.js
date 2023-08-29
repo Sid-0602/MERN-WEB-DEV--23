@@ -1,23 +1,29 @@
-const user = require('../../../models/user');
+const User = require('../../../models/user');
 const jwt = require('jsonwebtoken');
 
 
 module.exports.createSession = async function(req,res){
 
-    let user = User.findOne({email: req.body.email});
+    let user = await User.findOne({email: req.body.email});
         try{
 
             //if user is not found or incorrect credentials 
-            if(!user || user.password!=req.body.password){
-                return res.json(422,{
-                    message: "Invalid username/password!"
+            if(!user){
+                return res.json(404,{
+                    message: "User not found!"
+                });
+            }
+
+            if(user.password!=req.body.password){
+                return res.json(404,{
+                    message: "Invalid Credentials!"
                 });
             }
 
             return res.json(200,{
                 message: "Sign-in Successful! Token is generated!",
                 data:{
-                    token: jwt.sign(user.toJSON(), "Encrypt/Decrypt Key", {expiresIn:'100000'})
+                    token: jwt.sign(user.toJSON(), "EncryptionKey", {expiresIn:'100000'})
                 }
             }); 
         }catch(err){
