@@ -4,8 +4,6 @@
 //index used to list down action names.
 
 
-
-
 const Post = require('../../../models/post');
 const User  = require('../../../models/user');
 const Comment = require('../../../models/comment');
