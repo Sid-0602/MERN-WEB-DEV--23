@@ -1,3 +1,4 @@
+//basic server code and for user-cookies:
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const app = express();
