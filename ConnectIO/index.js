@@ -6,11 +6,14 @@ const port = 8000; //when deployed on live server, it is deployed on port 80.
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
 
-//used for session cookie and auth
+//used for session cookie and auth:
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy.js');
 const MongoStore  = require('connect-mongo')(session);
+
+//passport-jwt:
+const passportJWT = require('./config/passport-jwt-strategy.js');
 
 //sass middleware (this is DART MIDDLEWARE)
 const sassMiddleware = require('sass-middleware');
