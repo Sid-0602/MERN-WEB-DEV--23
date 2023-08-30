@@ -12,6 +12,9 @@ const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy.js');
 const MongoStore  = require('connect-mongo')(session);
 
+//google-Oauth:
+const passportGoogle = require('./config/passport-google-oauth2-strategy')
+
 //passport-jwt:
 const passportJWT = require('./config/passport-jwt-strategy.js');
 

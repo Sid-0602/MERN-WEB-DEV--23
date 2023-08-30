@@ -18,6 +18,9 @@ passport.use(new googleStrategy({
             if(err){console.log("Error in Google-Strategy Passport!",err); return;}
 
             console.log(profile);
+            console.log("************************");
+            console.log("Access token is: ",accessToken);//this is access token for the user.
+            
 
             if(user){
                 //if found, set this user as req.user

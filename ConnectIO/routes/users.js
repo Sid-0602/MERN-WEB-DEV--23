@@ -19,7 +19,12 @@ router.post('/create',usersController.create);
 //to auth, use passport as middleware: 
 router.post('/create-session', passport.authenticate('local',{failureRedirect : '/users/sign-in'},), usersController.createSession);
 
-router.get('/sign-out', usersController.terminateSession); 
+router.get('/sign-out', usersController.terminateSession);
+
+//routes for google Oauth: (2 routes: one to send request to google and second is for callback URL)
+
+router.get('/auth/google',passport.authenticate('google',{scope: ['profile','email']}));
+router.get('/auth/google/callback',passport.authenticate('google',{failureRedirect: '/users/sign-in'}),usersController.createSession);
 
 
 module.exports = router;
