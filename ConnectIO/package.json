@@ -12,6 +12,7 @@
   "dependencies": {
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
@@ -19,6 +20,7 @@
     "mongoose": "^6.0.1",
     "multer": "^1.4.5-lts.1",
     "noty": "^3.2.0-beta-deprecated",
+    "passport-google-oauth": "^2.0.0",
     "passport-jwt": "^4.0.1",
     "sass": "^1.64.1"
   }
