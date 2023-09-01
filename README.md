@@ -18,6 +18,8 @@
 
    1. Languages: JavaScript (Nodejs runtime environment).
    2. Framework: ExpressJS
-   3. Middlewares: Passport JS, scss, sass. 
+   3. Middlewares: Passport JS, scss, sass.
+   4. Google O-Auth for Social Authentication.
+   5. Mailers: NodeMailer module.
 3. #### Database: MongoDB and Mongoose.
 4. #### Tools: Git/Github, MongoDB Compass
