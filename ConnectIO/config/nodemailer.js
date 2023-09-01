@@ -33,7 +33,7 @@ let renderTemplate = (data,relativePath) =>{
     return mailHTML;
 }
 
-
+//module is exported. 
 module.exports = {
     transporter : transporter,
     renderTemplate : renderTemplate

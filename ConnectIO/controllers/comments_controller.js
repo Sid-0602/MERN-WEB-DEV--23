@@ -1,5 +1,7 @@
 const Comment = require('../models/comment');
 const Post = require('../models/post');
+const nodeMailer = require('../config/nodemailer');
+const commentsMailer = require('../mailers/comments_mailers');
 
 module.exports.create = async function(req,res){
     //find if the post exists in database: 
@@ -15,7 +17,11 @@ module.exports.create = async function(req,res){
             });
             console.log('Comment posted successfully!');
             post.comments.push(comment);
-            post.save();   
+            await post.save();   
+
+            //populate the comments: 
+            comment = await comment.populate('user','name email')
+            await commentsMailer.newComment(comment);
             return  res.redirect('back');
         }
     } catch (err) {
