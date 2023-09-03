@@ -21,5 +21,6 @@
    3. Middlewares: Passport JS, scss, sass.
    4. Google O-Auth for Social Authentication.
    5. Mailers: NodeMailer module.
+   6. Kue and Redis: For job sequencing and prallel jobs.
 3. #### Database: MongoDB and Mongoose.
 4. #### Tools: Git/Github, MongoDB Compass
