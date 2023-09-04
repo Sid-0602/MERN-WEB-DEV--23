@@ -1,4 +1,3 @@
-const express = require('express');
 const Post = require('../models/post');
 const User  = require('../models/user');
 //the syntax to create controller: 
@@ -22,8 +21,11 @@ module.exports.home = async function(req,res){
             path: 'comments',
             populate: {
                 path: 'user'
+            },
+            populate: {
+                path: 'likes'
             }
-        });
+        }).populate('likes');
 
         let users = await User.find({}); 
 
