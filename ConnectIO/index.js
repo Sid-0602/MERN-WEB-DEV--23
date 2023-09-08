@@ -18,6 +18,11 @@ const passportGoogle = require('./config/passport-google-oauth2-strategy')
 //passport-jwt:
 const passportJWT = require('./config/passport-jwt-strategy.js');
 
+//socket.io for chat application: /* This is setup of chat-server*/ 
+const chatServer = require('http').Server(app);
+const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
+chatServer.listen(6000); //chatServer listens on port 6000.
+
 //sass middleware (this is DART MIDDLEWARE)
 const sassMiddleware = require('sass-middleware');
 const path = require('path');
