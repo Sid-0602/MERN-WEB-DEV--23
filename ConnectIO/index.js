@@ -5,6 +5,8 @@ const app = express();
 const port = 8000; //when deployed on live server, it is deployed on port 80.
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
+const env = require('./config/enviroment');
+const path = require('path');
 
 //used for session cookie and auth:
 const session = require('express-session');
@@ -29,13 +31,6 @@ const path = require('path');
 const flash = require('connect-flash');
 const customMare = require('./config/middleware');
 const multer = require('multer');
-app.use(sassMiddleware({
-    src: path.join('./assets/scss','assets','scss'),
-    dest: path.join('./assets/scss','assets','scss'),
-    debug: false,
-    outputStyle: 'expanded',
-    prefix: './css',
-}));
 
 
 
@@ -44,7 +39,7 @@ app.use(cookieParser());
 
 
 //connect static files for css/js
-app.use(express.static(__dirname + '/assets'));
+app.use(express.static(__dirname + env.asset_path));
 
 //making the upload path available for user.
 app.use('/uploads',express.static(__dirname + '/uploads'));
@@ -64,7 +59,7 @@ app.set('views','./views'); //add the views path.
 //mongo store is used to store the session cookie in the db. 
 app.use(session({
     name: 'user_id',
-    secret: 'something',
+    secret: env.session_cookie_key,
     saveUninitialized: false,
     resave: false,
     cookie: {
