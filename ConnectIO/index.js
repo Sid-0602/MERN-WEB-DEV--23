@@ -1,6 +1,8 @@
 //basic server code and for user-cookies:
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const env = ('./config/enviroment.js');
+const morgan = require('morgan'); //this is used for logging. 
 const app = express();
 const port = 8000; //when deployed on live server, it is deployed on port 80.
 const expressLayouts = require('express-ejs-layouts');
@@ -44,6 +46,8 @@ app.use(express.static(__dirname + env.asset_path));
 //making the upload path available for user.
 app.use('/uploads',express.static(__dirname + '/uploads'));
 
+//morgan to setup: 
+app.use(logger(env.morgan.mode,env.morgan.options));
 app.use(expressLayouts); //using layouts. 
 //extract styles and scripts from the layout. 
 app.set('layout extractStyles',true);
