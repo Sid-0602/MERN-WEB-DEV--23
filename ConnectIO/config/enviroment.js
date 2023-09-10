@@ -1,10 +1,31 @@
-
+import dotenv from 'dotenv';
 //This file contains env's for development and production. 
 
 const development ={
-    name: 'development',
-    asset_path: '/assets',
-    session_cookie_key: 'something',
+    name: process.env.CONNECTIO_ENVIRONMENT,
+    asset_path: process.env.ASSET_PATH,
+    session_cookie_key: process.env.SESSION_COOKIE_KEY,
+    database_name: 'ConnectIO_development',
+    smtp: {
+        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 587, //this is used for TLS .
+        auth: {
+            user: process.env.GMAIL_USERNAME ,
+            pass: process.env.GMAIL_PASSWORD
+        }
+    },
+    google_clientID: process.env.GOOGLE_CLIENTID,
+    google_clientSecret: process.env.GOOGLE_CLIENT_SECRET ,
+    google_callbackURL: process.env.GOOGLE_CALLBACK_URL ,
+    jwt_secret_key: process.env.JWT_SECRET_KEY
+    
+}
+
+const production ={
+    name: process.env.CONNECTIO_ENVIRONMENT,
+    asset_path: process.env.ASSET_PATH,
+    session_cookie_key: process.env.SESSION_COOKIE_KEY,
     database_name: 'ConnectIO_development',
     smtp: {
         service: 'gmail',
@@ -15,16 +36,11 @@ const development ={
             pass: "PASSWORD"
         }
     },
-    google_clientID: "154833171219-n7j77pepvdlflet11rtma7qe1v2lfkp8.apps.googleusercontent.com",
-    google_clientSecret: "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",
-    google_callbackURL: "http://localhost:8000/users/auth/google/callback",
-    jwt_secret_key: 'EncryptionKey',
-    
-}
-
-const production ={
-    name: 'production'
+    google_clientID: process.env.GOOGLE_CLIENTID,
+    google_clientSecret: process.env.GOOGLE_CLIENT_SECRET ,
+    google_callbackURL: process.env.GOOGLE_CALLBACK_URL ,
+    jwt_secret_key: process.env.JWT_SECRET_KEY
 
 }
 
-module.exports = development;
+module.exports = eval(process.env.CONNECTIO_DEVELOPMENT) == undefined ? development: eval(process.env.CONNECTIO_ENVIRONMENT);
