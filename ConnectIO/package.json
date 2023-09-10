@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod_start":"NODE_ENV=production"
+    "prod_start":"NODE_ENV=production nodemon index.js"
   },
   "author": "Siddhant Jadhav",
   "license": "ISC",
