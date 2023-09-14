@@ -25,3 +25,6 @@
    7. Socket.IO for chatting Engine.
 3. #### Database: MongoDB and Mongoose.
 4. #### Tools: Git/Github, MongoDB Compass
+5. #### Deployment:
+   1. AWS EC2.
+   2. 
