@@ -27,4 +27,4 @@
 4. #### Tools: Git/Github, MongoDB Compass
 5. #### Deployment:
    1. AWS EC2.
-   2. 
+   2. Nginx for Load Balancing. 
